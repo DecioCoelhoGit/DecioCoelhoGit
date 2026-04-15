@@ -183,3 +183,55 @@ git push
 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git config --global --unset credential.helper
 git config --global credential.helper store
 git push
+rm -f ~/.git-credentials
+git config --global --unset credential.helper
+git config --global credential.helper store
+git remote -v
+git remote remove origin
+git remote add origin https://github.com/DecioCoelhoGit/DecioCoelhoGit.git
+git remote -v
+git push -u origin main
+pwd
+ls
+git status
+git branch
+git add .
+git commit -m "Atualiza site para versão Apple Tesla"
+git branch -M main
+git push -u origin main
+cd ~/DecioCoelhoGit
+pwd
+ls
+git status
+git remote -v
+git pull origin main --allow-unrelated-histories --rebase
+git push -u origin main --force
+git status
+nano index.html
+git add index.html
+git commit -m "Ativa versão comercial completa"
+git push
+git status
+rm index.html
+nano index.html
+git add index.html
+git commit -m "Refina design nivel Apple keynote"
+git push
+rm index.html
+nano index.html
+git add index.html
+git commit -m "Ativa modo cinema no site"
+git push
+nano sipf.html
+git add sipf.html
+git commit -m "Cria landing page exclusiva do SIPF"
+git push
+./sipf.html
+rm index.html
+nano index.html
+git add index.html
+git commit -m "Aplica index cinema seguro completo"
+git push
+git push --set-upstream origin main
+git pull origin main --allow-unrelated-histories
+git push -f origin main
