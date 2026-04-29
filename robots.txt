@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://deciocoelhogit.github.io/portal-prefeitura-vilabela-mt/sitemap.xml
+0
+
