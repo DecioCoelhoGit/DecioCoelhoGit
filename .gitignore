@@ -1,0 +1,17 @@
+# Segurança
+.git-credentials
+.env
+*.key
+*.pem
+
+# Termux / sistema
+.bash_history
+*.save
+
+# Backup local
+backup/
+
+# Temporários
+.DS_Store
+Thumbs.db0
+
