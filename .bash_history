@@ -372,3 +372,16 @@ executar() {   validar_estrutura;    local renamed_count=0;   local skipped_coun
 rollback() {   echo;   echo "ROLLBACK:";   find "$ROOT_DIR" -type f -name "*.bak" | while read -r bak; do     original="${bak%.bak}";     cp "$bak" "$original";     echo "RESTAURADO: $original";   done;   echo "Rollback concluido."; }
 menu() {   while true; do     header;     echo "1) Validar estrutura";     echo "2) Simular renomeacoes";     echo "3) Executar renomeacoes";     echo "4) Rollback";     echo "5) Sair";     echo;     printf "Escolha uma opcao: ";     read -r opcao;      case "$opcao" in       1)         validar_estrutura;         ;;       2)         simular;         ;;       3)         executar;         ;;       4)         rollback;         ;;       5)         rm -f "$MAP_FILE";         exit 0;         ;;       *)         echo "Opcao invalida.";         ;;     esac;      echo;     printf "Pressione ENTER para continuar...";     read -r;   done; }
 menu
+cd ~/executivo-vilabela-mtnano renomear_hologramas_v4.sh
+./renomear_hologramas_v4.sh
+1) Validar estrutura
+2) Simular renomeações
+3) Executar renomeações
+4) Rollback
+5) Sair
+4
+git add .
+git commit -m "Padroniza imagens com V4 Sistema"
+git push
+cd ~/executivo-vilabela-mt
+nano renomear_hologramas.sh

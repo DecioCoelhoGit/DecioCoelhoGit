@@ -1,0 +1,693 @@
+<!DOCTYPE html><html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Antonio Décio Ferreira Coelho | Centro de Inteligência Profissional Digital</title>
+  <meta name="description" content="Centro de Inteligência Profissional Digital. IA aplicada, perícia contábil, gestão pública, projetos estratégicos, monetização e proposta comercial com padrão visual premium." />
+  <style>
+    :root {
+      --bg: #050814;
+      --bg-soft: #0a1222;
+      --panel: rgba(255,255,255,0.04);
+      --panel-strong: rgba(255,255,255,0.06);
+      --line: rgba(255,255,255,0.10);
+      --text: #f5f8ff;
+      --muted: #a8b3c8;
+      --gold: #d7b44a;
+      --gold-soft: #f0dc8c;
+      --green: #1fd38a;
+      --blue: #62a8ff;
+      --shadow: 0 18px 60px rgba(0,0,0,.42);
+      --radius: 28px;
+      --max: 1240px;
+    }* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top center, rgba(215,180,74,.09), transparent 24%),
+    radial-gradient(circle at 15% 20%, rgba(79,112,255,.12), transparent 20%),
+    linear-gradient(180deg, #000 0%, #040912 35%, #050b14 100%);
+  line-height: 1.55;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 20% 10%, rgba(215,180,74,0.08), transparent 40%),
+    radial-gradient(circle at 80% 30%, rgba(0,120,255,0.06), transparent 40%),
+    linear-gradient(180deg, rgba(255,255,255,.025), transparent 16%);
+  opacity: .78;
+  z-index: 0;
+}
+
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+
+.container {
+  width: min(calc(100% - 32px), var(--max));
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.nav-wrap {
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  backdrop-filter: blur(22px);
+  background: linear-gradient(180deg, rgba(2,5,11,.78), rgba(2,5,11,.56));
+  border-bottom: 1px solid rgba(255,255,255,.06);
+  box-shadow: 0 10px 30px rgba(0,0,0,.18);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 14px 0;
+}
+
+.brand {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  font-weight: 800;
+  letter-spacing: .2px;
+}
+
+.brand-mark {
+  width: 52px;
+  height: 52px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, rgba(255,255,255,.08), rgba(215,180,74,.16));
+  border: 1px solid rgba(255,255,255,.10);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.06), 0 0 28px rgba(215,180,74,.08);
+  font-size: 1.3rem;
+}
+
+.brand small {
+  display: block;
+  color: var(--muted);
+  font-size: .82rem;
+  font-weight: 600;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.menu a {
+  color: var(--muted);
+  font-weight: 600;
+  font-size: .95rem;
+}
+
+.menu a:hover { color: var(--text); }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 20px;
+  border-radius: 999px;
+  font-weight: 800;
+  border: 1px solid transparent;
+  transition: transform .22s ease, opacity .22s ease, background .22s ease, box-shadow .22s ease;
+}
+
+.btn:hover { transform: translateY(-2px) scale(1.01); }
+.btn-primary:active { transform: scale(0.98); }
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--gold), var(--gold-soft));
+  color: #201400;
+  box-shadow: 0 12px 28px rgba(215,180,74,.22);
+}
+
+.btn-secondary {
+  background: rgba(255,255,255,.035);
+  border-color: rgba(255,255,255,.09);
+  color: var(--text);
+}
+
+.hero {
+  padding: 76px 0 34px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-panel {
+  position: relative;
+  border-radius: 40px;
+  padding: 56px 40px 38px;
+  background:
+    radial-gradient(circle at 70% 18%, rgba(215,180,74,.10), transparent 18%),
+    linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+  border: 1px solid rgba(255,255,255,.10);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  backdrop-filter: blur(18px);
+}
+
+.hero-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.022) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.022) 1px, transparent 1px);
+  background-size: 34px 34px;
+  opacity: .35;
+  pointer-events: none;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  color: var(--gold-soft);
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.08);
+  font-weight: 800;
+  letter-spacing: .3px;
+  text-transform: uppercase;
+  font-size: .84rem;
+}
+
+h1 {
+  margin: 20px 0 16px;
+  font-size: clamp(2.8rem, 8vw, 6.6rem);
+  line-height: .92;
+  letter-spacing: -2.6px;
+  max-width: 980px;
+  text-wrap: balance;
+}
+
+.accent { color: var(--gold-soft); }
+
+.hero-sub {
+  max-width: 880px;
+  font-size: clamp(1.08rem, 2vw, 1.34rem);
+  color: var(--muted);
+  margin-bottom: 30px;
+  text-wrap: pretty;
+}
+
+.hero-sub strong {
+  color: var(--text);
+  font-weight: 800;
+}
+
+.mini-proof {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.proof {
+  padding: 12px 14px;
+  border-radius: 16px;
+  background: rgba(255,255,255,.035);
+  border: 1px solid rgba(255,255,255,.08);
+  color: var(--text);
+  font-weight: 700;
+  font-size: .92rem;
+  backdrop-filter: blur(10px);
+}
+
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 26px;
+}
+
+.hero-grid,
+.grid-3,
+.grid-2,
+.authority {
+  display: grid;
+  gap: 18px;
+}
+
+.hero-grid { grid-template-columns: 1.08fr .92fr; margin-top: 22px; }
+.grid-3, .authority { grid-template-columns: repeat(3, 1fr); }
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+
+.glass,
+.card,
+.proposal {
+  border-radius: var(--radius);
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.10);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+}
+
+.identity {
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  justify-content: space-between;
+}
+
+.identity-top {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.avatar {
+  width: 84px;
+  height: 84px;
+  border-radius: 24px;
+  display: grid;
+  place-items: center;
+  font-size: 1.8rem;
+  background: linear-gradient(135deg, rgba(255,255,255,.08), rgba(215,180,74,.16));
+  border: 1px solid rgba(255,255,255,.08);
+}
+
+.identity h2 { margin: 0 0 6px; font-size: 1.35rem; }
+.identity p { margin: 0; color: var(--muted); }
+
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.metric {
+  padding: 16px;
+  border-radius: 18px;
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(255,255,255,.07);
+}
+
+.metric strong {
+  display: block;
+  font-size: 1.22rem;
+  margin-bottom: 4px;
+}
+
+.metric span { color: var(--muted); font-size: .9rem; }
+
+.holo-block { padding: 18px; overflow: hidden; }
+
+.holo-frame {
+  position: relative;
+  border-radius: 28px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.09);
+  min-height: 320px;
+  background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.05), 0 18px 40px rgba(0,0,0,.28);
+}
+
+.holo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .28s ease, filter .28s ease;
+  transform: scale(1.02);
+  filter: saturate(1.02) contrast(1.03);
+}
+
+.holo-overlay {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 18px;
+  background: linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,.68));
+}
+
+.holo-overlay strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 1rem;
+}
+
+.holo-overlay span { color: #e8eefc; font-size: .92rem; }
+
+section {
+  padding: 24px 0;
+  scroll-margin-top: 92px;
+  position: relative;
+  z-index: 1;
+}
+
+.section-head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.section-head h3 {
+  margin: 0;
+  font-size: clamp(1.6rem, 3vw, 2.3rem);
+  letter-spacing: -1px;
+}
+
+.section-head p {
+  margin: 0;
+  color: var(--muted);
+  max-width: 760px;
+}
+
+.card,
+.proposal { position: relative; overflow: hidden; }
+
+.card {
+  padding: 24px;
+  transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 60px rgba(0,0,0,.34), 0 0 0 1px rgba(215,180,74,.08);
+  border-color: rgba(215,180,74,.20);
+}
+
+.card::after,
+.proposal::before {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+
+.card::after {
+  right: -60px;
+  bottom: -60px;
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle, rgba(215,180,74,.10), transparent 66%);
+}
+
+.proposal::before {
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(215,180,74,.12), transparent 28%);
+}
+
+.card h4 {
+  margin: 0 0 10px;
+  font-size: 1.18rem;
+}
+
+.card p, .card li { color: var(--muted); }
+
+.card ul {
+  margin: 12px 0 0 18px;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.proposal {
+  padding: 28px;
+  border-radius: 32px;
+  background: linear-gradient(135deg, rgba(215,180,74,.10), rgba(255,255,255,.03));
+}
+
+.proposal h3 { margin: 0 0 10px; font-size: 2rem; }
+.proposal p { color: var(--muted); max-width: 860px; }
+
+.footer {
+  padding: 34px 0 46px;
+  text-align: center;
+  color: var(--muted);
+  position: relative;
+  z-index: 1;
+}
+
+.footer strong { color: var(--text); }
+
+.float-wa {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 80;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 18px;
+  border-radius: 999px;
+  background: rgba(37, 211, 102, 0.88);
+  color: #fff;
+  font-weight: 900;
+  box-shadow: 0 18px 38px rgba(0,0,0,.28);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,.18);
+}
+
+.fade-up,
+.fade-delay-1,
+.fade-delay-2,
+.fade-delay-3 {
+  opacity: 1;
+  transform: none;
+  animation: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .holo-img, .card, .btn { transition: none !important; }
+}
+
+@media (max-width: 980px) {
+  .menu { display: none; }
+  .hero-grid,
+  .grid-3,
+  .grid-2,
+  .authority { grid-template-columns: 1fr; }
+  .hero-panel { padding: 36px 24px 24px; }
+  h1 { font-size: clamp(2.2rem, 11vw, 4rem); }
+  .metric-grid { grid-template-columns: 1fr; }
+}
+
+  </style>
+</head>
+<body>
+  <div class="nav-wrap">
+    <div class="container nav">
+      <a class="brand" href="#inicio">
+        <div class="brand-mark">🧠</div>
+        <div>
+          DecioCoelhoGit
+          <small>Centro de Inteligência Profissional Digital</small>
+        </div>
+      </a>
+      <div class="menu">
+        <a href="#projetos">Projetos</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#comercial">Comercial</a>
+        <a href="#contato">Contato</a>
+        <a class="btn btn-primary" href="https://wa.me/5565984091524" target="_blank" rel="noreferrer">Solicitar diagnóstico</a>
+      </div>
+    </div>
+  </div>  <main id="inicio" class="hero">
+    <div class="container">
+      <div class="hero-panel fade-up">
+        <span class="eyebrow">2ª onda da IA · Arquitetura estratégica · Presença institucional</span>
+        <div style="height:18px"></div>
+        <h1>Antonio Décio<br />Ferreira Coelho<span class="accent">.</span></h1>
+        <p class="hero-sub"><strong>Inteligência aplicada com linguagem de produto, estética institucional e visão de futuro.</strong><br /><br />Contabilista, especialista em gestão pública e financeira, servidor público estadual aposentado, perito contábil e curador do SIPF. Uma atuação que conecta inteligência artificial, perícia, governança, turismo inteligente e modelagem de sistemas para transformar visão em estrutura.</p>
+        <div class="mini-proof" style="margin-top:20px;">
+          <span class="proof">+40 anos em gestão pública e tecnologia</span>
+          <span class="proof">SIPF · MVGC-9 · Viracopos</span>
+          <span class="proof">OpenAI + ChatGPT · Parcerias estratégicas</span>
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://wa.me/5565984091524" target="_blank" rel="noreferrer">Solicitar diagnóstico estratégico</a>
+          <a class="btn btn-secondary" href="#projetos">Explorar projetos</a>
+        </div>
+      </div><div class="hero-grid fade-up fade-delay-1">
+    <div class="glass holo-block">
+      <div class="holo-frame" id="holoStage">
+        <img class="holo-img" id="holoImg" src="assets/holograma-parcerias.png" alt="Holograma de arquitetura institucional com parcerias estratégicas" />
+        <div class="holo-overlay">
+          <strong>Holograma de Arquitetura Institucional</strong>
+          <span>Integração visual entre SIPF, MVGC-9, OpenAI, ChatGPT, Agência Viracopos e Núcleo de Inovação & IA Generativa.</span>
+        </div>
+      </div>
+    </div>
+
+    <aside class="glass identity">
+      <div class="identity-top">
+        <div class="avatar">🏛️</div>
+        <div>
+          <h2>Autoridade e trajetória</h2>
+          <p>Convergência entre experiência pública, consultoria técnica, inteligência aplicada e construção de soluções autorais.</p>
+        </div>
+      </div>
+      <div class="metric-grid">
+        <div class="metric"><strong>Gestão</strong><span>Planejamento, governança e estruturação institucional</span></div>
+        <div class="metric"><strong>Perícia</strong><span>Leitura técnica, financeira e contábil estratégica</span></div>
+        <div class="metric"><strong>IA</strong><span>Projetos com linguagem de produto e automação</span></div>
+        <div class="metric"><strong>Turismo</strong><span>Ecossistemas híbridos e inovação territorial</span></div>
+      </div>
+    </aside>
+  </div>
+</div>
+
+  </main>  <section id="projetos">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h3>Projetos Estratégicos</h3>
+          <p>Arquiteturas institucionais concebidas para unir inteligência, método, identidade e capacidade de execução.</p>
+        </div>
+      </div>
+      <div class="grid-3 fade-up fade-delay-2">
+        <div class="card">
+          <h4>🧠 SIPF</h4>
+          <p>Sistema de Inteligência Pericial Financeira com abordagem híbrida, voltado à perícia, investigação financeira, leitura crítica e apoio analítico especializado.</p>
+        </div>
+        <div class="card">
+          <h4>🏛️ MVGC-9</h4>
+          <p>Modelo estratégico de governança e inteligência institucional para ambientes públicos e estruturas decisórias de alta responsabilidade.</p>
+        </div>
+        <div class="card">
+          <h4>🌿 Ecossistema Viracopos</h4>
+          <p>Integração entre turismo inteligente, patrimônio, inovação, comunicação e inteligência artificial aplicada ao território.</p>
+        </div>
+      </div>
+    </div>
+  </section>  <section id="servicos">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h3>Serviços e Monetização</h3>
+          <p>Soluções estratégicas voltadas à geração de valor, tomada de decisão e transformação institucional.</p>
+        </div>
+      </div>
+      <div class="authority fade-up fade-delay-2">
+        <div class="card">
+          <h4>📊 Diagnóstico Estratégico</h4>
+          <p>Análise completa de estruturas públicas e privadas, identificando gargalos, oportunidades e caminhos de melhoria com base em inteligência aplicada.</p>
+        </div>
+        <div class="card">
+          <h4>🧠 Implantação do SIPF</h4>
+          <p>Aplicação do Sistema de Inteligência Pericial Financeira para auditorias, perícias, investigações financeiras e suporte técnico especializado.</p>
+        </div>
+        <div class="card">
+          <h4>🏛️ Consultoria em Gestão Pública</h4>
+          <p>Estruturação de modelos de governança, controle e eficiência administrativa com base no MVGC-9 e boas práticas institucionais.</p>
+        </div>
+        <div class="card">
+          <h4>🚀 Projetos com IA Generativa</h4>
+          <p>Criação de agentes inteligentes, automação de processos, engenharia de prompts e integração de IA em ambientes institucionais.</p>
+        </div>
+        <div class="card">
+          <h4>📄 Proposta Comercial Automática</h4>
+          <p>Estrutura pronta para pitch, PDF institucional, apresentação executiva, proposta técnica e ativação comercial para novos contratos.</p>
+        </div>
+        <div class="card">
+          <h4>🤝 Curadoria e Posicionamento</h4>
+          <p>Modelagem de autoridade digital, sites institucionais, linguagem de produto e presença executiva com foco em confiança e diferenciação.</p>
+        </div>
+      </div>
+    </div>
+  </section>  <section id="comercial">
+    <div class="container">
+      <div class="proposal fade-up fade-delay-3">
+        <h3>Proposta Comercial Automática</h3>
+        <p>Fluxo pensado para transformar presença digital em captação real de demanda, qualificação de oportunidades e conversão comercial com abordagem estratégica.</p>
+        <div class="grid-2" style="margin-top:20px;">
+          <div class="card">
+            <h4>📄 Formatos de contratação</h4>
+            <ul>
+              <li>Diagnóstico estratégico inicial</li>
+              <li>Consultoria por projeto</li>
+              <li>Implantação assistida</li>
+              <li>Mentoria institucional e técnica</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h4>🚀 Próximo passo comercial</h4>
+            <p>Agende uma conversa inicial para alinhamento de contexto, necessidade, escopo, cronograma e proposta personalizada.</p>
+            <div class="hero-actions" style="margin-top:16px;">
+              <a class="btn btn-primary" href="https://wa.me/5565984091524" target="_blank" rel="noreferrer">Solicitar proposta agora</a>
+              <a class="btn btn-secondary" href="mailto:antoniodecioferreiracoelho@gmail.com">Enviar briefing comercial</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>  <section id="contato">
+    <div class="container">
+      <div class="proposal fade-up fade-delay-3">
+        <h3>Versão Comercial Completa</h3>
+        <p>Estrutura consolidada para contato institucional, apresentação executiva, qualificação de demanda e evolução contínua do portfólio digital.</p>
+        <div class="grid-2" style="margin-top:20px;">
+          <div class="card">
+            <h4>📍 Base territorial</h4>
+            <p><strong>Localização:</strong> Vila Bela da Santíssima Trindade – MT, Brasil</p>
+            <p><strong>E-mail profissional:</strong> antoniodecioferreiracoelho@gmail.com</p>
+            <p><strong>WhatsApp direto:</strong> 5565984091524</p>
+          </div>
+          <div class="card">
+            <h4>🌐 Canal institucional</h4>
+            <p>Portal em evolução contínua, com integração a novos projetos, documentos, ativos digitais, apresentações e landing pages especializadas.</p>
+            <div class="hero-actions" style="margin-top:16px;">
+              <a class="btn btn-primary" href="https://wa.me/5565984091524" target="_blank" rel="noreferrer">Falar no WhatsApp</a>
+              <a class="btn btn-secondary" href="mailto:antoniodecioferreiracoelho@gmail.com">Enviar e-mail</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>  <footer class="footer">
+    <div class="container">
+      <strong>Antonio Décio Ferreira Coelho</strong><br />
+      Centro de Inteligência Profissional Digital · DecioCoelhoGit · OpenAI + ChatGPT
+    </div>
+  </footer><a class="float-wa" href="https://wa.me/5565984091524" target="_blank" rel="noreferrer">💬 WhatsApp</a>
+
+  <script>
+    (function () {
+      const stage = document.getElementById('holoStage');
+      const img = document.getElementById('holoImg');
+      if (!stage || !img) return;
+
+      function move(e) {
+        const rect = stage.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width;
+        const y = (e.clientY - rect.top) / rect.height;
+        const rx = (0.5 - y) * 10;
+        const ry = (x - 0.5) * 12;
+        img.style.transform = `scale(1.04) rotateX(${rx}deg) rotateY(${ry}deg)`;
+      }
+
+      function reset() {
+        img.style.transform = 'scale(1.02) rotateX(0deg) rotateY(0deg)';
+      }
+
+      stage.addEventListener('mousemove', move);
+      stage.addEventListener('mouseleave', reset);
+      stage.addEventListener('touchmove', function (e) {
+        if (!e.touches || !e.touches[0]) return;
+        move(e.touches[0]);
+      }, { passive: true });
+      stage.addEventListener('touchend', reset);
+    })();
+  </script></body>
+</html>
+
