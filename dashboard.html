@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Dashboard | Prefeitura Vila Bela MT</title>
+  <meta name="description" content="Dashboard institucional com indicadores públicos, dados estratégicos e painéis de acompanhamento da gestão municipal de Vila Bela - MT.">
+  <meta name="robots" content="index, follow">
+
+  <link rel="canonical" href="https://deciocoelhogit.github.io/portal-prefeitura-vilabela-mt/dashboard.html">
+  <link rel="icon" href="assets/icons/favicon.ico">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="header">
+  <div class="container header-content">
+    <a href="index.html" class="logo">
+      <img src="assets/logos/vilabela-brasao-1-transparente.png" alt="Brasão Vila Bela MT">
+      <div>
+        <h1>Portal Prefeitura</h1>
+        <span>Dashboard de Gestão</span>
+      </div>
+    </a>
+
+    <nav class="nav" id="nav">
+      <a href="index.html">Início</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="noticias.html">Notícias</a>
+      <a href="cultura.html">Cultura</a>
+      <a href="turismo.html">Turismo</a>
+      <a href="transparencia.html">Transparência</a>
+      <a href="gabinete.html">Gabinete</a>
+      <a href="admin.html">Admin</a>
+    </nav>
+
+    <div class="actions">
+      <button id="menuToggle">☰</button>
+      <button id="themeToggle">🌙</button>
+      <button id="accessBtn">♿</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <img src="assets/banners/vilabela-capa-oficial-1.jpg" class="hero-bg" alt="Vila Bela MT">
+
+  <div class="hero-content">
+    <h2>Dashboard de Gestão Pública</h2>
+    <p>
+      Indicadores estratégicos, dados institucionais e visão executiva para
+      acompanhamento da gestão municipal.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="transparencia.html" class="btn primary">Ver Transparência</a>
+      <a href="admin.html" class="btn">Área Admin</a>
+    </div>
+  </div>
+</section>
+
+<section class="modules container">
+  <h2>Visão Geral da Gestão</h2>
+
+  <div class="grid">
+    <div class="card">
+      💰
+      <h3>Receitas</h3>
+      <p>Estimativa, arrecadação e evolução das receitas municipais.</p>
+      <strong>R$ 0,00</strong>
+    </div>
+
+    <div class="card">
+      📉
+      <h3>Despesas</h3>
+      <p>Execução orçamentária, empenhos, liquidações e pagamentos.</p>
+      <strong>R$ 0,00</strong>
+    </div>
+
+    <div class="card">
+      👥
+      <h3>Servidores</h3>
+      <p>Quadro funcional, vínculos, lotações e gestão de pessoas.</p>
+      <strong>0</strong>
+    </div>
+
+    <div class="card">
+      🏗️
+      <h3>Obras</h3>
+      <p>Acompanhamento de obras, convênios e investimentos.</p>
+      <strong>0</strong>
+    </div>
+
+    <div class="card">
+      🌿
+      <h3>Turismo</h3>
+      <p>Potencial turístico, atrativos e roteiros municipais.</p>
+      <strong>0</strong>
+    </div>
+
+    <div class="card">
+      🎭
+      <h3>Cultura</h3>
+      <p>Patrimônio, eventos, manifestações e memória vilabelense.</p>
+      <strong>0</strong>
+    </div>
+  </div>
+</section>
+
+<section class="highlights container">
+  <h2>Painéis Analíticos</h2>
+
+  <div class="grid">
+    <div class="box">
+      <h3>Receitas x Despesas</h3>
+      <p>Área preparada para gráficos dinâmicos com Chart.js e dados reais.</p>
+    </div>
+
+    <div class="box">
+      <h3>Distribuição por Eixo</h3>
+      <p>Administração, educação, saúde, turismo, cultura e infraestrutura.</p>
+    </div>
+
+    <div class="box">
+      <h3>Status Técnico</h3>
+      <p>Base pronta para JSON, Firebase, APIs públicas e dashboard real.</p>
+    </div>
+  </div>
+</section>
+
+<section class="highlights container">
+  <h2>Governança Digital</h2>
+
+  <div class="grid">
+    <div class="box">
+      <h3>Dados Públicos</h3>
+      <p>Integração futura com receitas, despesas, contratos, licitações e relatórios.</p>
+    </div>
+
+    <div class="box">
+      <h3>Gestão Executiva</h3>
+      <p>Indicadores para tomada de decisão e acompanhamento institucional.</p>
+    </div>
+
+    <div class="box">
+      <h3>Portal Vivo</h3>
+      <p>Estrutura preparada para atualização dinâmica e automação administrativa.</p>
+    </div>
+  </div>
+</section>
+
+<div id="accessPanel" class="access-panel">
+  <h3>Acessibilidade</h3>
+  <button onclick="setFont(1)">A</button>
+  <button onclick="setFont(1.2)">A+</button>
+  <button onclick="setFont(1.4)">A++</button>
+  <button onclick="setContrast()">Contraste</button>
+  <button onclick="resetAccess()">Reset</button>
+</div>
+
+<footer class="footer">
+  <p>© 2026 Prefeitura de Vila Bela da Santíssima Trindade - MT • Dashboard Institucional</p>
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
+
