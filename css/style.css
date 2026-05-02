@@ -3,7 +3,81 @@
    Portal Prefeitura Vila Bela MT
    ========================================================= */
 
-:root {
+/* ===== FIX GLOBAL RESPONSIVO ===== */
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Corrige largura geral */
+main, section, .section {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* ===== HEADER FIX ===== */
+.site-header {
+  flex-wrap: wrap;
+}
+
+/* ===== NAV MENU FIX ===== */
+.main-nav {
+  width: calc(100% - 36px);
+  left: 18px;
+  right: 18px;
+}
+
+/* ===== HERO FIX ===== */
+.hero {
+  padding: 60px 16px;
+}
+
+/* ===== CARDS FIX ===== */
+.card {
+  width: 100%;
+}
+
+/* ===== GRID FIX ===== */
+.grid {
+  grid-template-columns: 1fr;
+}
+
+/* ===== ACESSIBILIDADE FIX ===== */
+.access-panel {
+  width: calc(100% - 40px);
+  left: 20px;
+  right: 20px;
+}
+
+/* Remove duplicações visuais */
+.access-panel button {
+  width: 100%;
+}
+
+/* ===== BOTÕES HERO ===== */
+.hero-actions {
+  width: 100%;
+}
+
+.hero-actions a {
+  width: 100%;
+  text-align: center;
+}
+
+/* ===== LIGHT MODE FIX ===== */
+body.light .section {
+  background: #f4f7fb;
+}
+
+body.light .hero {
+  color: #07111f;
+}
+
+/* ===== SOMBRA MAIS LIMPA ===== */
+.card {
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}:root {
   --azul: #071b33;
   --azul-2: #0b2d52;
   --dourado: #d6b35a;

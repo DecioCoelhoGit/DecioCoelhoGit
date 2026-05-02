@@ -1,387 +1,500 @@
-pkg update && pkg upgrade -y
-pkg install git -y
-git config --global user.name "Antonio Décio Ferreira Coelho"
-git config --global user.email "SEU_EMAIL_DO_GITHUB"
-mkdir DecioCoelhoGit
-cd DecioCoelhoGit
-nano README.md
-git init
-git add README.md
-git commit -m "Centro de Inteligência Profissional Digital - versão fundadora"
-git branch -M main
-git remote add origin https://github.com/SEU_USUARIO/DecioCoelhoGit.git
-git push -u origin main
-mkdir assets
-assets/arquitetura-holografica.png
-## 🌐 Arquitetura Digital Integrada
-cd ~/DecioCoelhoGit
-ls
-git init
-git add README.md
-git commit -m "Centro de Inteligência Profissional Digital - versão fundadora"
-git branch -M main
-git remote add origin https://github.com/SEU_USUARIO/DecioCoelhoGit.git
-git push -u origin main
-mv README.md.save README.md
-ls
-git add README.md
-git commit -m "Centro de Inteligência Profissional Digital - versão fundadora"
-git branch -M main
-git push -u origin main
-git remote -v
-git remote remove origin
-git remote add origin https://github.com/DecioCoelhoGit/DecioCoelhoGit.git
-git push -u origin main
-git pull origin main --allow-unrelated-histories --rebase
-git rebase --abort
-git push -u origin main --force
-mkdir -p assets
-nano README.md
-# 🧠 CENTRO DE INTELIGÊNCIA PROFISSIONAL DIGITAL
-## Antonio Décio Ferreira Coelho
-Contabilista | Especialista em Gestão Pública e Financeira  
-Servidor Público Estadual Aposentado  
-Perito Contábil | Curador do Sistema SIPF  
-Idealizador do Ecossistema Viracopos  
----
-## 🌍 VISÃO ESTRATÉGICA
-Vivemos a **segunda onda da Inteligência Artificial**.
-Se a primeira automatizou tarefas, a segunda está redefinindo o próprio conceito de inteligência.
-Não se trata mais de programar sistemas, mas de **dialogar com eles**.
-A engenharia de prompts emerge como uma nova linguagem — capaz de transformar ideias em estruturas, conceitos em sistemas e visão em realidade.
----
-## 🚀 QUEBRA DE PARADIGMA
-O que antes exigia equipes, anos e estruturas complexas, hoje pode ser concebido, modelado e validado por um único profissional com domínio estratégico de IA.
-Estamos diante de um novo tipo de capacidade:
-- Construção de sistemas sem infraestrutura pesada
-- Produção intelectual em escala inédita
-- Integração entre humano e inteligência artificial
-👉 Isso não é evolução.  
-👉 É ruptura.
----
-## 📊 SISTEMAS DESENVOLVIDOS
-### 🔹 SIPF — Sistema de Inteligência Pericial Financeira
-Modelo inovador para perícia contábil, auditoria e análise financeira com apoio de IA.
-### 🔹 Ecossistema Viracopos
-Integração entre turismo, inovação, cultura e inteligência artificial aplicada.
-### 🔹 Centro de Inteligência Profissional Digital
-Plataforma pessoal de alta performance baseada em IA generativa.
----
-## 🧠 ESPECIALIDADES
-- Perícia Contábil e Financeira
-- Gestão Pública e Planejamento Estratégico
-- Inteligência Artificial Aplicada
-- Engenharia de Prompts
-- Modelagem de Sistemas Inteligentes
-- Curadoria de Conhecimento
----
-## ⚙️ TECNOLOGIA
-- GitHub + Termux
-- OpenAI + ChatGPT
-- Notion
-- Integrações futuras via APIs
----
-## 📈 POSICIONAMENTO
-Atuação na fronteira entre:
-- Inteligência Artificial
-- Gestão Estratégica
-- Produção Intelectual
-- Inovação Aplicada
----
-## 🔮 VISÃO DE FUTURO
-A inteligência artificial não substitui o profissional.
-Ela amplifica quem sabe utilizá-la.
-O diferencial não será mais saber fazer, mas saber pensar, estruturar e direcionar.
----
-## 🤝 PARCERIAS
-**Curadoria:** Antonio Décio Ferreira Coelho  
-**Co-curadoria:** Ederson Coelho Andrade  
-**Parceria Tecnológica:** OpenAI + ChatGPT  
-**Núcleo de Inovação & Inteligência Artificial Viracopos**
----
-## 📍 LOCALIZAÇÃO
-Vila Bela da Santíssima Trindade – MT  
-Brasil
----
-## 📡 CONTATO
-Em breve: portal oficial e integrações institucionais
-git add README.md
-git commit -m "Refina README institucional"
-git push
-cd DecioCoelhoGit
+git push origin main
+git add index.html
+git commit -m "Atualiza index com estrutura institucional"
+git push origin main
+git add .
+git commit -m "Aplica style V4 cinematografico"
+git push origin main
+git add dashboard.html
+git commit -m "Atualiza dashboard para V4 compativel"
+git push origin main
 pwd
 ls
-nano README.md
-y
-git add README.md
-git commit -m "Refina README institucional"
-git push
-rm README.md.save
-nano README.md
-git status
-nano README.md
-git status
-git add README.md
-git commit -m "Atualiza README institucional"
-git push -u origin main --force
-nano index.html
-git add index.html
-git commit -m "Cria site premium"
-git push
-nano index.html
-git add index.html
-git commit -m "Atualiza site para versão ultra premium"
-git push
-nano index.html
-git add index.html
-git commit -m "Integra contato profissional final"
-git push
-nano index.html
-git add index.html
-git commit -m "Adiciona seção de autoridade e trajetória"
-git push
-rm index.html
-nano index.html
-git add index.html
-git commit -m "Adiciona seção de serviços e monetização"
-git push
-rm index.html
-nano index.html
-git add index.html a_digital_3d_rendered_infographic_showcases_the_c.png
-git commit -m "Integra holograma interativo no site"
-git push
-termux-setup-storage
+cd portal-prefeitura-vilabela-mt
+ls
 cd ~/DecioCoelhoGit
-mkdir -p assets
-cd ~/storage/shared
 ls
-cd Pictures
-ls
-cp ~/storage/shared/Pictures/holograma-parcerias.png assets/
-ls assets
-clear
-termux-setup-storage
+find ~ -name "dashboard.html"
+cp -r ~/index.html ~/DecioCoelhoGit/
+cp -r ~/css ~/DecioCoelhoGit/
+cp -r ~/js ~/DecioCoelhoGit/
+cp -r ~/assets ~/DecioCoelhoGit/
+cp -r ~/img ~/DecioCoelhoGit/
+cp -r ~/robots.txt ~/DecioCoelhoGit/
+cp -r ~/sitemap.xml ~/DecioCoelhoGit/
 cd ~/DecioCoelhoGit
-mkdir -p assets
-cp ~/storage/shared/Pictures/holograma-parcerias.png assets/
-ls assets
-rm index.html
-nano index.html
-git add index.html assets/holograma-parcerias.png
-git commit -m "Integra holograma interativo com assets"
-git push
-git checkout HEAD~1 index.html
-rm index.html
-nano index.html
+nano dashboard.html
 git add .
-git commit -m "Upgrade visual com holograma interativo"
-git push
-nano index.html
-git add index.html
-git commit -m "Atualiza site para versão Apple Tesla"
-git push
-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git config --global --unset credential.helper
-git config --global credential.helper store
-git push
-rm -f ~/.git-credentials
-git config --global --unset credential.helper
-git config --global credential.helper store
-git remote -v
-git remote remove origin
-git remote add origin https://github.com/DecioCoelhoGit/DecioCoelhoGit.git
-git remote -v
-git push -u origin main
-pwd
-ls
-git status
-git branch
+git commit -m "Portal Prefeitura V4 completo (index + dashboard + style + js)"
+git push origin main
+git pull origin main --rebase
+git push origin main
 git add .
-git commit -m "Atualiza site para versão Apple Tesla"
-git branch -M main
-git push -u origin main
-cd ~/DecioCoelhoGit
-pwd
-ls
-git status
-git remote -v
-git pull origin main --allow-unrelated-histories --rebase
-git push -u origin main --force
-git status
-nano index.html
-git add index.html
-git commit -m "Ativa versão comercial completa"
-git push
-git status
-rm index.html
-nano index.html
-git add index.html
-git commit -m "Refina design nivel Apple keynote"
-git push
-rm index.html
-nano index.html
-git add index.html
-git commit -m "Ativa modo cinema no site"
-git push
-nano sipf.html
-git add sipf.html
-git commit -m "Cria landing page exclusiva do SIPF"
-git push
-./sipf.html
-rm index.html
-nano index.html
-git add index.html
-git commit -m "Aplica index cinema seguro completo"
-git push
-git push --set-upstream origin main
-git pull origin main --allow-unrelated-histories
-git push -f origin main
-cd ~/executivo-vilabela-mt
-ls
+git commit -m "Corrige script menu tema acessibilidade"
+git push origin main
+git add noticias.html
+git commit -m "Atualiza noticias para V4 compativel"
+git push origin main
+git add cultura.html
+git commit -m "Cultura V4 padronizada"
+git push origin main
+git add turismo.html
+git commit -m "Turismo V4 padronizada"
+git push origin main
+git add transparencia.html
+git commit -m "Transparencia V4 padronizada"
+git push origin main
+git add gabinete.html
+git commit -m "Gabinete V4 padronizada"
+git push origin main
+git add admin.html
+git commit -m "Admin V4 padronizada"
+git push origin main
+git add js/script.js css/style.css
+git commit -m "Aplica script V5 com tema persistente e menu premium"
+git push origin main
 git add .
-git commit -m "Backup antes de renomear hologramas"
-git push
-nano renomear_hologramas.sh
-#!/data/data/com.termux/files/usr/bin/bash
-set -euo pipefail
-echo "=========================================="
-echo " EVBMT :: RENOMEADOR V3 COMPLETO"
-echo "=========================================="
-ROOT_DIR="."
-LOG_FILE="$ROOT_DIR/renomear_hologramas.log"
-MAP_FILE="$(mktemp)"
-: > "$LOG_FILE"
-log() {   echo "$1" | tee -a "$LOG_FILE"; }
-fail() {   log "ERRO: $1";   rm -f "$MAP_FILE";   exit 1; }
-log "Iniciando validacoes..."
-[ -f "$ROOT_DIR/index.html" ] || fail "index.html nao encontrado na raiz."
-[ -f "$ROOT_DIR/login.html" ] || fail "login.html nao encontrado na raiz."
-./renomear_hologramas_v4.sh
-set -euo pipefail
-ROOT_DIR="."
-LOG_FILE="$ROOT_DIR/renomear_hologramas.log"
-MAP_FILE="$(mktemp)"
-TIMESTAMP="$(date '+%Y-%m-%d %H:%M:%S')"
-: > "$LOG_FILE"
-log() {   echo "$1" | tee -a "$LOG_FILE"; }
-fail() {   log "ERRO: $1";   rm -f "$MAP_FILE";   exit 1; }
-header() {   echo;   echo "==========================================";   echo " EVBMT :: RENOMEADOR V4 SISTEMA";   echo "==========================================";   echo; }
-gerar_mapa() {
-cat > "$MAP_FILE" <<'EOF'
-assets/img/hologramas/holograma1-fontes-1920x600.png|assets/img/hologramas/evbmt-holograma1-fontes-1920x600.png
-assets/img/hologramas/holograma1-fontes-1200x630.png|assets/img/hologramas/evbmt-holograma1-fontes-1200x630.png
-assets/img/hologramas/holograma1-fontes-1080x1080.png|assets/img/hologramas/evbmt-holograma1-fontes-1080x1080.png
-assets/img/hologramas/holograma1-fontes-1080x1350.png|assets/img/hologramas/evbmt-holograma1-fontes-1080x1350.png
-assets/img/hologramas/holograma1-fontes-1080x1920.png|assets/img/hologramas/evbmt-holograma1-fontes-1080x1920.png
-assets/img/hologramas/holograma1-fontes-1280x720.png|assets/img/hologramas/evbmt-holograma1-fontes-1280x720.png
-assets/img/hologramas/holograma1-fontes-1080x608.png|assets/img/hologramas/evbmt-holograma1-fontes-1080x608.png
+git commit -m "Forca atualizacao cache V8 css js"
+git push origin main
+git add js/script.js
+git commit -m "Aplica script JS V6 ultra estavel"
+git push origin main
+git add js/script.js
+git commit -m "Aplica script JS V6 ultra estavel"
+git push origin main
+cd ~
+find . -name "portal-prefeitura-vilabela-mt" -type d
+cd ~
+git clone https://github.com/DecioCoelhoGit/portal-prefeitura-vilabela-mt.git
+cd portal-prefeitura-vilabela-mt
+ls
+cat js/script.js | head
+git status
+git add .
+git commit -m "Corrige script V6 no projeto correto"
+git push origin main
+grep -n "script.js" *.html
+grep -n "menuToggle\|themeToggle\|accessBtn\|accessPanel\|id=\"nav\"" *.html
+git add .
+git commit -m "Corrige chamada do script nas paginas V4"
+git push origin main
+git pull --rebase origin main
+git push origin main
+git add .
+git commit -m "Aplica header universal V4 definitivo"
+git pull --rebase origin main
+git push origin maincd ~/portal-prefeitura-vilabela-mt
+nano js/script.js
+cd ~/portal-prefeitura-vilabela-mt
+cat > index.html <<'EOF'
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal Prefeitura Vila Bela MT</title>
+  <meta name="description" content="Portal institucional da Prefeitura de Vila Bela da Santíssima Trindade - MT. Transparência, notícias, turismo, cultura e gestão pública digital.">
+  <link rel="stylesheet" href="css/style.css?v=8">
+</head>
 
-assets/img/hologramas/holograma2-fluxo-1920x600.png|assets/img/hologramas/evbmt-holograma2-fluxo-1920x600.png
-assets/img/hologramas/holograma2-fluxo-1200x630.png|assets/img/hologramas/evbmt-holograma2-fluxo-1200x630.png
-assets/img/hologramas/holograma2-fluxo-1080x1080.png|assets/img/hologramas/evbmt-holograma2-fluxo-1080x1080.png
-assets/img/hologramas/holograma2-fluxo-1080x1350.png|assets/img/hologramas/evbmt-holograma2-fluxo-1080x1350.png
-assets/img/hologramas/holograma2-fluxo-1080x1920.png|assets/img/hologramas/evbmt-holograma2-fluxo-1080x1920.png
-assets/img/hologramas/holograma2-fluxo-1280x720.png|assets/img/hologramas/evbmt-holograma2-fluxo-1280x720.png
-assets/img/hologramas/holograma2-fluxo-1080x608.png|assets/img/hologramas/evbmt-holograma2-fluxo-1080x608.png
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <img src="assets/logos/vilabela-brasao-1.png" alt="Brasão Vila Bela MT">
+      <span>Portal<br>Prefeitura</span>
+    </a>
 
-assets/img/hologramas/holograma3-risco-1920x600.png|assets/img/hologramas/evbmt-holograma3-risco-1920x600.png
-assets/img/hologramas/holograma3-risco-1200x630.png|assets/img/hologramas/evbmt-holograma3-risco-1200x630.png
-assets/img/hologramas/holograma3-risco-1080x1080.png|assets/img/hologramas/evbmt-holograma3-risco-1080x1080.png
-assets/img/hologramas/holograma3-risco-1080x1350.png|assets/img/hologramas/evbmt-holograma3-risco-1080x1350.png
-assets/img/hologramas/holograma3-risco-1080x1920.png|assets/img/hologramas/evbmt-holograma3-risco-1080x1920.png
-assets/img/hologramas/holograma3-risco-1280x720.png|assets/img/hologramas/evbmt-holograma3-risco-1280x720.png
-assets/img/hologramas/holograma3-risco-1080x608.png|assets/img/hologramas/evbmt-holograma3-risco-1080x608.png
+    <div class="header-actions">
+      <button id="menuToggle" class="icon-btn" type="button">☰</button>
+      <button id="themeToggle" class="icon-btn" type="button">🌙</button>
+      <button id="accessBtn" class="icon-btn" type="button">♿</button>
+    </div>
 
-assets/img/hologramas/holograma4-paineis-1920x600.png|assets/img/hologramas/evbmt-holograma4-paineis-1920x600.png
-assets/img/hologramas/holograma4-paineis-1200x630.png|assets/img/hologramas/evbmt-holograma4-paineis-1200x630.png
-assets/img/hologramas/holograma4-paineis-1080x1080.png|assets/img/hologramas/evbmt-holograma4-paineis-1080x1080.png
-assets/img/hologramas/holograma4-paineis-1080x1350.png|assets/img/hologramas/evbmt-holograma4-paineis-1080x1350.png
-assets/img/hologramas/holograma4-paineis-1080x1920.png|assets/img/hologramas/evbmt-holograma4-paineis-1080x1920.png
-assets/img/hologramas/holograma4-paineis-1280x720.png|assets/img/hologramas/evbmt-holograma4-paineis-1280x720.png
-assets/img/hologramas/holograma4-paineis-1080x608.png|assets/img/hologramas/evbmt-holograma4-paineis-1080x608.png
+    <nav id="nav" class="main-nav">
+      <a href="index.html">Início</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="noticias.html">Notícias</a>
+      <a href="cultura.html">Cultura</a>
+      <a href="turismo.html">Turismo</a>
+      <a href="transparencia.html">Transparência</a>
+      <a href="gabinete.html">Gabinete</a>
+      <a href="admin.html">Admin</a>
+    </nav>
+  </header>
 
-assets/img/hologramas/holograma5-parcerias-1920x600.png|assets/img/hologramas/evbmt-holograma5-parcerias-1920x600.png
-assets/img/hologramas/holograma5-parcerias-1200x630.png|assets/img/hologramas/evbmt-holograma5-parcerias-1200x630.png
-assets/img/hologramas/holograma5-parcerias-1080x1080.png|assets/img/hologramas/evbmt-holograma5-parcerias-1080x1080.png
-assets/img/hologramas/holograma5-parcerias-1080x1350.png|assets/img/hologramas/evbmt-holograma5-parcerias-1080x1350.png
-assets/img/hologramas/holograma5-parcerias-1080x1920.png|assets/img/hologramas/evbmt-holograma5-parcerias-1080x1920.png
-assets/img/hologramas/holograma5-parcerias-1280x720.png|assets/img/hologramas/evbmt-holograma5-parcerias-1280x720.png
-assets/img/hologramas/holograma5-parcerias-1080x608.png|assets/img/hologramas/evbmt-holograma5-parcerias-1080x608.png
+  <div id="accessPanel" class="access-panel">
+    <h2>Acessibilidade</h2>
+    <button onclick="setFont(1)">A</button>
+    <button onclick="setFont(1.15)">A+</button>
+    <button onclick="setFont(1.3)">A++</button>
+    <button onclick="setContrast()">Contraste</button>
+    <button onclick="resetAccess()">Reset</button>
+  </div>
 
-assets/img/hologramas/holograma6-capa-1920x600.png|assets/img/hologramas/evbmt-holograma6-capa-1920x600.png
-assets/img/hologramas/holograma6-capa-1200x630.png|assets/img/hologramas/evbmt-holograma6-capa-1200x630.png
-assets/img/hologramas/holograma6-capa-1080x1080.png|assets/img/hologramas/evbmt-holograma6-capa-1080x1080.png
-assets/img/hologramas/holograma6-capa-1080x1350.png|assets/img/hologramas/evbmt-holograma6-capa-1080x1350.png
-assets/img/hologramas/holograma6-capa-1080x1920.png|assets/img/hologramas/evbmt-holograma6-capa-1080x1920.png
-assets/img/hologramas/holograma6-capa-1280x720.png|assets/img/hologramas/evbmt-holograma6-capa-1280x720.png
-assets/img/hologramas/holograma6-capa-1080x608.png|assets/img/hologramas/evbmt-holograma6-capa-1080x608.png
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Gestão pública digital com identidade e transparência</h1>
+        <p>Um portal moderno para integrar serviços, dados públicos, turismo, cultura e governança digital.</p>
+        <div class="hero-actions">
+          <a href="transparencia.html" class="btn-primary">Portal da Transparência</a>
+          <a href="noticias.html" class="btn-secondary">Notícias Oficiais</a>
+        </div>
+      </div>
+    </section>
 
-assets/img/hologramas/holograma7-social-1920x600.png|assets/img/hologramas/evbmt-holograma7-social-1920x600.png
-assets/img/hologramas/holograma7-social-1200x630.png|assets/img/hologramas/evbmt-holograma7-social-1200x630.png
-assets/img/hologramas/holograma7-social-1080x1080.png|assets/img/hologramas/evbmt-holograma7-social-1080x1080.png
-assets/img/hologramas/holograma7-social-1080x1350.png|assets/img/hologramas/evbmt-holograma7-social-1080x1350.png
-assets/img/hologramas/holograma7-social-1080x1920.png|assets/img/hologramas/evbmt-holograma7-social-1080x1920.png
-assets/img/hologramas/holograma7-social-1280x720.png|assets/img/hologramas/evbmt-holograma7-social-1280x720.png
-assets/img/hologramas/holograma7-social-1080x608.png|assets/img/hologramas/evbmt-holograma7-social-1080x608.png
+    <section class="section">
+      <h2>Módulos do Portal</h2>
+      <div class="grid">
+        <a class="card" href="dashboard.html"><span>📊</span><h3>Dashboard</h3><p>Indicadores e visão estratégica da gestão.</p></a>
+        <a class="card" href="noticias.html"><span>📰</span><h3>Notícias</h3><p>Comunicados e informações oficiais.</p></a>
+        <a class="card" href="cultura.html"><span>🎭</span><h3>Cultura</h3><p>Patrimônio histórico e identidade vilabelense.</p></a>
+        <a class="card" href="turismo.html"><span>🌿</span><h3>Turismo</h3><p>Roteiros e atrativos naturais.</p></a>
+        <a class="card" href="transparencia.html"><span>📁</span><h3>Transparência</h3><p>Receitas, despesas e dados públicos.</p></a>
+        <a class="card" href="gabinete.html"><span>🏛️</span><h3>Gabinete</h3><p>Agenda institucional e gestão executiva.</p></a>
+      </div>
+    </section>
 
-assets/img/banner/banner-holograma1.png|assets/img/banner/evbmt-banner-holograma1.png
-assets/img/banner/banner-holograma2.png|assets/img/banner/evbmt-banner-holograma2.png
-assets/img/banner/banner-holograma3.png|assets/img/banner/evbmt-banner-holograma3.png
-assets/img/banner/banner-holograma4.png|assets/img/banner/evbmt-banner-holograma4.png
-assets/img/banner/banner-holograma5.png|assets/img/banner/evbmt-banner-holograma5.png
-assets/img/banner/banner-holograma6.png|assets/img/banner/evbmt-banner-holograma6.png
-assets/img/banner/banner-holograma7.png|assets/img/banner/evbmt-banner-holograma7.png
+    <section class="section">
+      <h2>Destaques Institucionais</h2>
+      <div class="grid">
+        <div class="card"><h3>Portal em evolução</h3><p>Base digital escalável para serviços públicos e inteligência de dados.</p></div>
+        <div class="card"><h3>Turismo estratégico</h3><p>Valorização do potencial natural e histórico do município.</p></div>
+        <div class="card"><h3>Cultura viva</h3><p>Preservação da identidade vilabelense.</p></div>
+      </div>
+    </section>
+  </main>
 
-assets/img/linkedin/linkedin-post-executivovilabelamt-hibrido-v1.png|assets/img/linkedin/evbmt-linkedin-post-hibrido-v1.png
-assets/img/linkedin/linkedin-banner-executivovilabelamt-hibrido-v1.png|assets/img/linkedin/evbmt-linkedin-banner-hibrido-v1.png
+  <footer>
+    © 2026 Prefeitura de Vila Bela da Santíssima Trindade - MT · Gestão Pública Inteligente
+  </footer>
 
-assets/img/instagram/instagram-post-holograma1-v1.png|assets/img/instagram/evbmt-instagram-post-holograma1-v1.png
-assets/img/instagram/instagram-post-holograma2-v1.png|assets/img/instagram/evbmt-instagram-post-holograma2-v1.png
-assets/img/instagram/instagram-post-holograma3-v1.png|assets/img/instagram/evbmt-instagram-post-holograma3-v1.png
-assets/img/instagram/instagram-post-holograma4-v1.png|assets/img/instagram/evbmt-instagram-post-holograma4-v1.png
-assets/img/instagram/instagram-post-holograma5-v1.png|assets/img/instagram/evbmt-instagram-post-holograma5-v1.png
-assets/img/instagram/instagram-post-holograma6-v1.png|assets/img/instagram/evbmt-instagram-post-holograma6-v1.png
-assets/img/instagram/instagram-post-holograma7-v1.png|assets/img/instagram/evbmt-instagram-post-holograma7-v1.png
-
-assets/img/stories/story-holograma1-v1.png|assets/img/stories/evbmt-story-holograma1-v1.png
-assets/img/stories/story-holograma2-v1.png|assets/img/stories/evbmt-story-holograma2-v1.png
-assets/img/stories/story-holograma3-v1.png|assets/img/stories/evbmt-story-holograma3-v1.png
-assets/img/stories/story-holograma4-v1.png|assets/img/stories/evbmt-story-holograma4-v1.png
-assets/img/stories/story-holograma5-v1.png|assets/img/stories/evbmt-story-holograma5-v1.png
-assets/img/stories/story-holograma6-v1.png|assets/img/stories/evbmt-story-holograma6-v1.png
-assets/img/stories/story-holograma7-v1.png|assets/img/stories/evbmt-story-holograma7-v1.png
-
-assets/img/thumbnails/thumb-holograma1.png|assets/img/thumbnails/evbmt-thumb-holograma1.png
-assets/img/thumbnails/thumb-holograma2.png|assets/img/thumbnails/evbmt-thumb-holograma2.png
-assets/img/thumbnails/thumb-holograma3.png|assets/img/thumbnails/evbmt-thumb-holograma3.png
-assets/img/thumbnails/thumb-holograma4.png|assets/img/thumbnails/evbmt-thumb-holograma4.png
-assets/img/thumbnails/thumb-holograma5.png|assets/img/thumbnails/evbmt-thumb-holograma5.png
-assets/img/thumbnails/thumb-holograma6.png|assets/img/thumbnails/evbmt-thumb-holograma6.png
-assets/img/thumbnails/thumb-holograma7.png|assets/img/thumbnails/evbmt-thumb-holograma7.png
-
-assets/img/pdf/pdf-capa-holograma6.png|assets/img/pdf/evbmt-pdf-capa-holograma6.png
-assets/img/pdf/pdf-paineis-holograma4.png|assets/img/pdf/evbmt-pdf-paineis-holograma4.png
-assets/img/pdf/pdf-risco-holograma3.png|assets/img/pdf/evbmt-pdf-risco-holograma3.png
-assets/img/pdf/pdf-parcerias-holograma5.png|assets/img/pdf/evbmt-pdf-parcerias-holograma5.png
-assets/img/pdf/pdf-fluxo-holograma2.png|assets/img/pdf/evbmt-pdf-fluxo-holograma2.png
-assets/img/pdf/pdf-fontes-holograma1.png|assets/img/pdf/evbmt-pdf-fontes-holograma1.png
+  <script src="js/script.js?v=8"></script>
+</body>
+</html>
 EOF
- }
-validar_estrutura() {   log "[$TIMESTAMP] Iniciando validacoes...";   [ -f "$ROOT_DIR/index.html" ] || fail "index.html nao encontrado.";   [ -f "$ROOT_DIR/login.html" ] || fail "login.html nao encontrado.";   [ -f "$ROOT_DIR/admin.html" ] || fail "admin.html nao encontrado.";   [ -d "$ROOT_DIR/assets" ] || fail "pasta assets nao encontrada.";   [ -d "$ROOT_DIR/dashboard" ] || fail "pasta dashboard nao encontrada.";    gerar_mapa;    local line_num=0;   while IFS='|' read -r old new; do     line_num=$((line_num + 1));     [ -z "$old" ] && fail "Linha $line_num sem origem.";     [ -z "$new" ] && fail "Linha $line_num sem destino.";     [ "$old" = "$new" ] && fail "Linha $line_num com origem igual ao destino.";   done < "$MAP_FILE";    log "Estrutura validada com sucesso."; }
-simular() {   validar_estrutura;   echo;   echo "SIMULACAO:";   while IFS='|' read -r old new; do     if [ -f "$old" ]; then       echo "RENOMEARIA: $old -> $new";     else       echo "IGNORARIA:  $old";     fi;   done < "$MAP_FILE"; }
-executar() {   validar_estrutura;    local renamed_count=0;   local skipped_count=0;    log "Executando renomeacoes...";    while IFS='|' read -r old new; do     if [ -f "$old" ]; then       mkdir -p "$(dirname "$new")";       mv "$old" "$new";       log "RENOMEADO: $old -> $new";       renamed_count=$((renamed_count + 1));     else       log "IGNORADO: $old";       skipped_count=$((skipped_count + 1));     fi;   done < "$MAP_FILE";    log "Atualizando referencias no projeto...";    find "$ROOT_DIR" -type f \(     -name "*.html" -o     -name "*.css" -o     -name "*.js" -o     -name "*.md" -o     -name "*.json" -o     -name "*.txt"   \) ! -name "*.bak" ! -path "./.git/*" | while read -r file; do     cp "$file" "$file.bak";      while IFS='|' read -r old new; do       sed -i "s|$old|$new|g" "$file";       sed -i "s|../$old|../$new|g" "$file";       sed -i "s|${old#assets/img/}|${new#assets/img/}|g" "$file";     done < "$MAP_FILE";   done;    log "Concluido.";   log "Renomeados: $renamed_count";   log "Ignorados: $skipped_count";   log "Backups .bak criados.";   log "Log: $LOG_FILE"; }
-rollback() {   echo;   echo "ROLLBACK:";   find "$ROOT_DIR" -type f -name "*.bak" | while read -r bak; do     original="${bak%.bak}";     cp "$bak" "$original";     echo "RESTAURADO: $original";   done;   echo "Rollback concluido."; }
-menu() {   while true; do     header;     echo "1) Validar estrutura";     echo "2) Simular renomeacoes";     echo "3) Executar renomeacoes";     echo "4) Rollback";     echo "5) Sair";     echo;     printf "Escolha uma opcao: ";     read -r opcao;      case "$opcao" in       1)         validar_estrutura;         ;;       2)         simular;         ;;       3)         executar;         ;;       4)         rollback;         ;;       5)         rm -f "$MAP_FILE";         exit 0;         ;;       *)         echo "Opcao invalida.";         ;;     esac;      echo;     printf "Pressione ENTER para continuar...";     read -r;   done; }
-menu
-cd ~/executivo-vilabela-mtnano renomear_hologramas_v4.sh
-./renomear_hologramas_v4.sh
-1) Validar estrutura
-2) Simular renomeações
-3) Executar renomeações
-4) Rollback
-5) Sair
-4
+
+cat > css/style.css <<'EOF'
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  background:#020814;
+  color:#fff;
+}
+
+.site-header{
+  position:sticky;
+  top:0;
+  z-index:9999;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+  padding:18px;
+  background:#020814;
+  border-bottom:1px solid rgba(255,255,255,.15);
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  color:#fff;
+  text-decoration:none;
+  font-weight:800;
+  font-size:18px;
+}
+
+.brand img{
+  width:58px;
+}
+
+.header-actions{
+  display:flex;
+  gap:8px;
+}
+
+.icon-btn{
+  width:52px;
+  height:52px;
+  border-radius:16px;
+  border:1px solid rgba(255,255,255,.28);
+  background:#06101d;
+  color:#fff;
+  font-size:24px;
+}
+
+.main-nav{
+  display:none;
+  position:absolute;
+  top:100%;
+  left:18px;
+  right:18px;
+  padding:28px;
+  background:#020814;
+  border:1px solid rgba(255,255,255,.25);
+  border-radius:28px;
+  box-shadow:0 20px 80px rgba(0,0,0,.65);
+}
+
+.main-nav.active{
+  display:grid;
+  gap:22px;
+}
+
+.main-nav a{
+  color:#35e46b;
+  text-decoration:none;
+  font-size:24px;
+  font-weight:800;
+}
+
+.access-panel{
+  display:none;
+  position:fixed;
+  top:120px;
+  left:20px;
+  right:20px;
+  z-index:10000;
+  padding:24px;
+  background:#000;
+  border:1px solid rgba(255,255,255,.35);
+  border-radius:28px;
+}
+
+.access-panel.show{
+  display:grid;
+  gap:14px;
+}
+
+.access-panel h2{
+  margin:0 0 10px;
+}
+
+.access-panel button{
+  padding:18px;
+  border-radius:16px;
+  border:1px solid rgba(255,255,255,.35);
+  background:#111;
+  color:#fff;
+  font-weight:800;
+  font-size:18px;
+}
+
+.hero{
+  min-height:72vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:80px 22px;
+  background:
+    linear-gradient(rgba(2,8,20,.72),rgba(2,8,20,.92)),
+    url("../assets/banners/portal-og-1.jpg") center/cover no-repeat;
+}
+
+.hero h1{
+  font-size:clamp(34px,9vw,72px);
+  line-height:1;
+  margin:0 0 22px;
+}
+
+.hero p{
+  max-width:720px;
+  margin:0 auto 28px;
+  color:#d8e2ee;
+  font-size:18px;
+}
+
+.hero-actions{
+  display:grid;
+  gap:14px;
+}
+
+.btn-primary,
+.btn-secondary{
+  display:block;
+  padding:16px 22px;
+  border-radius:999px;
+  text-decoration:none;
+  font-weight:800;
+}
+
+.btn-primary{
+  background:#22c96b;
+  color:#fff;
+}
+
+.btn-secondary{
+  border:1px solid rgba(255,255,255,.25);
+  color:#fff;
+}
+
+.section{
+  padding:56px 22px;
+  max-width:1100px;
+  margin:auto;
+}
+
+.section h2{
+  font-size:32px;
+  margin-bottom:24px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:18px;
+}
+
+.card{
+  display:block;
+  text-decoration:none;
+  color:inherit;
+  padding:24px;
+  border-radius:22px;
+  background:#0b1423;
+  border:1px solid rgba(255,255,255,.08);
+  box-shadow:0 20px 50px rgba(0,0,0,.25);
+}
+
+.card h3{
+  color:#d8b84a;
+  margin:12px 0 8px;
+}
+
+.card p{
+  color:#cbd5e1;
+}
+
+footer{
+  text-align:center;
+  padding:30px 20px;
+  color:#cbd5e1;
+  font-size:14px;
+  border-top:1px solid rgba(255,255,255,.08);
+}
+
+body.light{
+  background:#f4f7fb;
+  color:#07111f;
+}
+
+body.light .site-header{
+  background:#fff;
+  color:#07111f;
+}
+
+body.light .brand{
+  color:#07111f;
+}
+
+body.light .icon-btn{
+  background:#fff;
+  color:#07111f;
+  border-color:#d1d5db;
+}
+
+body.light .card{
+  background:#fff;
+  color:#07111f;
+}
+
+body.light .card p{
+  color:#334155;
+}
+
+body.light footer{
+  color:#07111f;
+}
+
+body.contrast{
+  filter:contrast(1.35);
+}
+
+@media(min-width:768px){
+  .grid{
+    grid-template-columns:repeat(3,1fr);
+  }
+
+  .hero-actions{
+    display:flex;
+    justify-content:center;
+  }
+}
+EOF
+
+cat > js/script.js <<'EOF'
+(function () {
+  "use strict";
+
+  function ready(fn) {
+    if (document.readyState !== "loading") fn();
+    else document.addEventListener("DOMContentLoaded", fn);
+  }
+
+  ready(function () {
+    const menuBtn = document.getElementById("menuToggle");
+    const themeBtn = document.getElementById("themeToggle");
+    const accessBtn = document.getElementById("accessBtn");
+    const nav = document.getElementById("nav");
+    const accessPanel = document.getElementById("accessPanel");
+
+    const savedTheme = localStorage.getItem("portal-theme");
+    if (savedTheme === "light") {
+      document.body.classList.add("light");
+      if (themeBtn) themeBtn.textContent = "☀️";
+    }
+
+    if (menuBtn && nav) {
+      menuBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        nav.classList.toggle("active");
+        menuBtn.textContent = nav.classList.contains("active") ? "×" : "☰";
+      });
+    }
+
+    if (themeBtn) {
+      themeBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        document.body.classList.toggle("light");
+
+        const isLight = document.body.classList.contains("light");
+        localStorage.setItem("portal-theme", isLight ? "light" : "dark");
+        themeBtn.textContent = isLight ? "☀️" : "🌙";
+      });
+    }
+
+    if (accessBtn && accessPanel) {
+      accessBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        accessPanel.classList.toggle("show");
+      });
+    }
+  });
+
+  window.setFont = function (size) {
+    document.body.style.fontSize = size + "em";
+    localStorage.setItem("portal-font", size);
+  };
+
+  window.setContrast = function () {
+    document.body.classList.toggle("contrast");
+  };
+
+  window.resetAccess = function () {
+    document.body.style.fontSize = "1em";
+    document.body.classList.remove("contrast");
+    localStorage.removeItem("portal-font");
+  };
+})();
+EOF
+
 git add .
-git commit -m "Padroniza imagens com V4 Sistema"
-git push
-cd ~/executivo-vilabela-mt
-nano renomear_hologramas.sh
+git commit -m "Aplica pacote unico V8 funcional"
+git pull --rebase origin main
+git push origin main
