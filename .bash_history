@@ -1,500 +1,500 @@
-git push origin main
-git add index.html
-git commit -m "Atualiza index com estrutura institucional"
-git push origin main
-git add .
-git commit -m "Aplica style V4 cinematografico"
-git push origin main
-git add dashboard.html
-git commit -m "Atualiza dashboard para V4 compativel"
-git push origin main
-pwd
-ls
-cd portal-prefeitura-vilabela-mt
-ls
-cd ~/DecioCoelhoGit
-ls
-find ~ -name "dashboard.html"
-cp -r ~/index.html ~/DecioCoelhoGit/
-cp -r ~/css ~/DecioCoelhoGit/
-cp -r ~/js ~/DecioCoelhoGit/
-cp -r ~/assets ~/DecioCoelhoGit/
-cp -r ~/img ~/DecioCoelhoGit/
-cp -r ~/robots.txt ~/DecioCoelhoGit/
-cp -r ~/sitemap.xml ~/DecioCoelhoGit/
-cd ~/DecioCoelhoGit
-nano dashboard.html
-git add .
-git commit -m "Portal Prefeitura V4 completo (index + dashboard + style + js)"
-git push origin main
-git pull origin main --rebase
-git push origin main
-git add .
-git commit -m "Corrige script menu tema acessibilidade"
-git push origin main
-git add noticias.html
-git commit -m "Atualiza noticias para V4 compativel"
-git push origin main
-git add cultura.html
-git commit -m "Cultura V4 padronizada"
-git push origin main
-git add turismo.html
-git commit -m "Turismo V4 padronizada"
-git push origin main
-git add transparencia.html
-git commit -m "Transparencia V4 padronizada"
-git push origin main
-git add gabinete.html
-git commit -m "Gabinete V4 padronizada"
-git push origin main
-git add admin.html
-git commit -m "Admin V4 padronizada"
-git push origin main
-git add js/script.js css/style.css
-git commit -m "Aplica script V5 com tema persistente e menu premium"
-git push origin main
-git add .
-git commit -m "Forca atualizacao cache V8 css js"
-git push origin main
-git add js/script.js
-git commit -m "Aplica script JS V6 ultra estavel"
-git push origin main
-git add js/script.js
-git commit -m "Aplica script JS V6 ultra estavel"
-git push origin main
-cd ~
-find . -name "portal-prefeitura-vilabela-mt" -type d
-cd ~
-git clone https://github.com/DecioCoelhoGit/portal-prefeitura-vilabela-mt.git
-cd portal-prefeitura-vilabela-mt
-ls
-cat js/script.js | head
-git status
-git add .
-git commit -m "Corrige script V6 no projeto correto"
-git push origin main
-grep -n "script.js" *.html
-grep -n "menuToggle\|themeToggle\|accessBtn\|accessPanel\|id=\"nav\"" *.html
-git add .
-git commit -m "Corrige chamada do script nas paginas V4"
-git push origin main
-git pull --rebase origin main
-git push origin main
-git add .
-git commit -m "Aplica header universal V4 definitivo"
-git pull --rebase origin main
-git push origin maincd ~/portal-prefeitura-vilabela-mt
-nano js/script.js
-cd ~/portal-prefeitura-vilabela-mt
-cat > index.html <<'EOF'
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portal Prefeitura Vila Bela MT</title>
-  <meta name="description" content="Portal institucional da Prefeitura de Vila Bela da Santíssima Trindade - MT. Transparência, notícias, turismo, cultura e gestão pública digital.">
-  <link rel="stylesheet" href="css/style.css?v=8">
-</head>
-
-<body>
-  <header class="site-header">
-    <a class="brand" href="index.html">
-      <img src="assets/logos/vilabela-brasao-1.png" alt="Brasão Vila Bela MT">
-      <span>Portal<br>Prefeitura</span>
-    </a>
-
-    <div class="header-actions">
-      <button id="menuToggle" class="icon-btn" type="button">☰</button>
-      <button id="themeToggle" class="icon-btn" type="button">🌙</button>
-      <button id="accessBtn" class="icon-btn" type="button">♿</button>
-    </div>
-
-    <nav id="nav" class="main-nav">
-      <a href="index.html">Início</a>
-      <a href="dashboard.html">Dashboard</a>
-      <a href="noticias.html">Notícias</a>
-      <a href="cultura.html">Cultura</a>
-      <a href="turismo.html">Turismo</a>
-      <a href="transparencia.html">Transparência</a>
-      <a href="gabinete.html">Gabinete</a>
-      <a href="admin.html">Admin</a>
-    </nav>
-  </header>
-
-  <div id="accessPanel" class="access-panel">
-    <h2>Acessibilidade</h2>
-    <button onclick="setFont(1)">A</button>
-    <button onclick="setFont(1.15)">A+</button>
-    <button onclick="setFont(1.3)">A++</button>
-    <button onclick="setContrast()">Contraste</button>
-    <button onclick="resetAccess()">Reset</button>
-  </div>
-
-  <main>
-    <section class="hero">
-      <div class="hero-content">
-        <h1>Gestão pública digital com identidade e transparência</h1>
-        <p>Um portal moderno para integrar serviços, dados públicos, turismo, cultura e governança digital.</p>
-        <div class="hero-actions">
-          <a href="transparencia.html" class="btn-primary">Portal da Transparência</a>
-          <a href="noticias.html" class="btn-secondary">Notícias Oficiais</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2>Módulos do Portal</h2>
-      <div class="grid">
-        <a class="card" href="dashboard.html"><span>📊</span><h3>Dashboard</h3><p>Indicadores e visão estratégica da gestão.</p></a>
-        <a class="card" href="noticias.html"><span>📰</span><h3>Notícias</h3><p>Comunicados e informações oficiais.</p></a>
-        <a class="card" href="cultura.html"><span>🎭</span><h3>Cultura</h3><p>Patrimônio histórico e identidade vilabelense.</p></a>
-        <a class="card" href="turismo.html"><span>🌿</span><h3>Turismo</h3><p>Roteiros e atrativos naturais.</p></a>
-        <a class="card" href="transparencia.html"><span>📁</span><h3>Transparência</h3><p>Receitas, despesas e dados públicos.</p></a>
-        <a class="card" href="gabinete.html"><span>🏛️</span><h3>Gabinete</h3><p>Agenda institucional e gestão executiva.</p></a>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2>Destaques Institucionais</h2>
-      <div class="grid">
-        <div class="card"><h3>Portal em evolução</h3><p>Base digital escalável para serviços públicos e inteligência de dados.</p></div>
-        <div class="card"><h3>Turismo estratégico</h3><p>Valorização do potencial natural e histórico do município.</p></div>
-        <div class="card"><h3>Cultura viva</h3><p>Preservação da identidade vilabelense.</p></div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    © 2026 Prefeitura de Vila Bela da Santíssima Trindade - MT · Gestão Pública Inteligente
-  </footer>
-
-  <script src="js/script.js?v=8"></script>
-</body>
-</html>
-EOF
-
-cat > css/style.css <<'EOF'
-*{
-  box-sizing:border-box;
-}
-
-body{
-  margin:0;
-  font-family:Arial, Helvetica, sans-serif;
-  background:#020814;
-  color:#fff;
+  overflow-x:hidden !important;
 }
 
 .site-header{
-  position:sticky;
-  top:0;
-  z-index:9999;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:14px;
-  padding:18px;
-  background:#020814;
-  border-bottom:1px solid rgba(255,255,255,.15);
+  position:sticky !important;
+  top:0 !important;
+  z-index:2147483647 !important;
+  width:100% !important;
+  min-height:72px !important;
+  background:rgba(255,255,255,.96) !important;
+  backdrop-filter:blur(18px) !important;
+  -webkit-backdrop-filter:blur(18px) !important;
 }
 
-.brand{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  color:#fff;
-  text-decoration:none;
-  font-weight:800;
-  font-size:18px;
+body.dark .site-header,
+body.contrast .site-header{
+  background:rgba(2,6,18,.96) !important;
 }
 
 .brand img{
-  width:58px;
+  object-fit:contain !important;
+  background:#fff !important;
+  padding:3px !important;
+  border-radius:4px !important;
 }
 
-.header-actions{
-  display:flex;
-  gap:8px;
+body.contrast .hero,
+body.contrast .card{
+  background:#000 !important;
+  border:2px solid #fff !important;
 }
 
-.icon-btn{
-  width:52px;
-  height:52px;
-  border-radius:16px;
-  border:1px solid rgba(255,255,255,.28);
-  background:#06101d;
-  color:#fff;
-  font-size:24px;
+body.contrast .hero-title,
+body.contrast .section-title,
+body.contrast .card h3{
+  color:#ffff00 !important;
 }
 
-.main-nav{
-  display:none;
-  position:absolute;
-  top:100%;
-  left:18px;
-  right:18px;
-  padding:28px;
-  background:#020814;
-  border:1px solid rgba(255,255,255,.25);
-  border-radius:28px;
-  box-shadow:0 20px 80px rgba(0,0,0,.65);
+body.contrast .btn-primary{
+  background:#ffff00 !important;
+  color:#000 !important;
+  border-color:#ffff00 !important;
 }
 
-.main-nav.active{
-  display:grid;
-  gap:22px;
-}
+@media(max-width:480px){
+  body{ padding-top:0 !important; }
 
-.main-nav a{
-  color:#35e46b;
-  text-decoration:none;
-  font-size:24px;
-  font-weight:800;
-}
-
-.access-panel{
-  display:none;
-  position:fixed;
-  top:120px;
-  left:20px;
-  right:20px;
-  z-index:10000;
-  padding:24px;
-  background:#000;
-  border:1px solid rgba(255,255,255,.35);
-  border-radius:28px;
-}
-
-.access-panel.show{
-  display:grid;
-  gap:14px;
-}
-
-.access-panel h2{
-  margin:0 0 10px;
-}
-
-.access-panel button{
-  padding:18px;
-  border-radius:16px;
-  border:1px solid rgba(255,255,255,.35);
-  background:#111;
-  color:#fff;
-  font-weight:800;
-  font-size:18px;
-}
-
-.hero{
-  min-height:72vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:80px 22px;
-  background:
-    linear-gradient(rgba(2,8,20,.72),rgba(2,8,20,.92)),
-    url("../assets/banners/portal-og-1.jpg") center/cover no-repeat;
-}
-
-.hero h1{
-  font-size:clamp(34px,9vw,72px);
-  line-height:1;
-  margin:0 0 22px;
-}
-
-.hero p{
-  max-width:720px;
-  margin:0 auto 28px;
-  color:#d8e2ee;
-  font-size:18px;
-}
-
-.hero-actions{
-  display:grid;
-  gap:14px;
-}
-
-.btn-primary,
-.btn-secondary{
-  display:block;
-  padding:16px 22px;
-  border-radius:999px;
-  text-decoration:none;
-  font-weight:800;
-}
-
-.btn-primary{
-  background:#22c96b;
-  color:#fff;
-}
-
-.btn-secondary{
-  border:1px solid rgba(255,255,255,.25);
-  color:#fff;
-}
-
-.section{
-  padding:56px 22px;
-  max-width:1100px;
-  margin:auto;
-}
-
-.section h2{
-  font-size:32px;
-  margin-bottom:24px;
-}
-
-.grid{
-  display:grid;
-  grid-template-columns:1fr;
-  gap:18px;
-}
-
-.card{
-  display:block;
-  text-decoration:none;
-  color:inherit;
-  padding:24px;
-  border-radius:22px;
-  background:#0b1423;
-  border:1px solid rgba(255,255,255,.08);
-  box-shadow:0 20px 50px rgba(0,0,0,.25);
-}
-
-.card h3{
-  color:#d8b84a;
-  margin:12px 0 8px;
-}
-
-.card p{
-  color:#cbd5e1;
-}
-
-footer{
-  text-align:center;
-  padding:30px 20px;
-  color:#cbd5e1;
-  font-size:14px;
-  border-top:1px solid rgba(255,255,255,.08);
-}
-
-body.light{
-  background:#f4f7fb;
-  color:#07111f;
-}
-
-body.light .site-header{
-  background:#fff;
-  color:#07111f;
-}
-
-body.light .brand{
-  color:#07111f;
-}
-
-body.light .icon-btn{
-  background:#fff;
-  color:#07111f;
-  border-color:#d1d5db;
-}
-
-body.light .card{
-  background:#fff;
-  color:#07111f;
-}
-
-body.light .card p{
-  color:#334155;
-}
-
-body.light footer{
-  color:#07111f;
-}
-
-body.contrast{
-  filter:contrast(1.35);
-}
-
-@media(min-width:768px){
-  .grid{
-    grid-template-columns:repeat(3,1fr);
+  .site-header{
+    display:flex !important;
+    align-items:center !important;
+    justify-content:space-between !important;
+    gap:8px !important;
+    padding:10px 12px !important;
   }
 
-  .hero-actions{
-    display:flex;
-    justify-content:center;
+  .brand{
+    min-width:0 !important;
+    flex:1 !important;
+  }
+
+  .brand img{
+    width:44px !important;
+    height:44px !important;
+  }
+
+  .brand-title{
+    font-size:14px !important;
+    line-height:1.05 !important;
+  }
+
+  .header-actions{
+    display:flex !important;
+    gap:6px !important;
+    flex-shrink:0 !important;
+  }
+
+  .icon-btn{
+    width:42px !important;
+    height:42px !important;
+    font-size:20px !important;
   }
 }
-EOF
-
-cat > js/script.js <<'EOF'
-(function () {
-  "use strict";
-
-  function ready(fn) {
-    if (document.readyState !== "loading") fn();
-    else document.addEventListener("DOMContentLoaded", fn);
-  }
-
-  ready(function () {
-    const menuBtn = document.getElementById("menuToggle");
-    const themeBtn = document.getElementById("themeToggle");
-    const accessBtn = document.getElementById("accessBtn");
-    const nav = document.getElementById("nav");
-    const accessPanel = document.getElementById("accessPanel");
-
-    const savedTheme = localStorage.getItem("portal-theme");
-    if (savedTheme === "light") {
-      document.body.classList.add("light");
-      if (themeBtn) themeBtn.textContent = "☀️";
-    }
-
-    if (menuBtn && nav) {
-      menuBtn.addEventListener("click", function (e) {
-        e.preventDefault();
-        nav.classList.toggle("active");
-        menuBtn.textContent = nav.classList.contains("active") ? "×" : "☰";
-      });
-    }
-
-    if (themeBtn) {
-      themeBtn.addEventListener("click", function (e) {
-        e.preventDefault();
-        document.body.classList.toggle("light");
-
-        const isLight = document.body.classList.contains("light");
-        localStorage.setItem("portal-theme", isLight ? "light" : "dark");
-        themeBtn.textContent = isLight ? "☀️" : "🌙";
-      });
-    }
-
-    if (accessBtn && accessPanel) {
-      accessBtn.addEventListener("click", function (e) {
-        e.preventDefault();
-        accessPanel.classList.toggle("show");
-      });
-    }
-  });
-
-  window.setFont = function (size) {
-    document.body.style.fontSize = size + "em";
-    localStorage.setItem("portal-font", size);
-  };
-
-  window.setContrast = function () {
-    document.body.classList.toggle("contrast");
-  };
-
-  window.resetAccess = function () {
-    document.body.style.fontSize = "1em";
-    document.body.classList.remove("contrast");
-    localStorage.removeItem("portal-font");
-  };
-})();
 EOF
 
 git add .
-git commit -m "Aplica pacote unico V8 funcional"
+git commit -m "Patch V9.2 ajuste final header brasao contraste"
+git pull --rebase origin main
+git push origin main
+cd ~/portal-prefeitura-vilabela-mt
+sed -i 's|assets/logos/vilabela-brasao-1-preta.png|assets/logos/vilabela-brasao-1-transparente.png|g' *.html
+sed -i 's|assets/logos/vilabela-brasao-1.png|assets/logos/vilabela-brasao-1-transparente.png|g' *.html
+cat >> css/style.css <<'EOF'
+
+/* PATCH V9.3 — HEADER FIXO + ACESSIBILIDADE */
+.site-header{
+  position:fixed !important;
+  top:0 !important;
+  left:0 !important;
+  right:0 !important;
+  z-index:999999 !important;
+  background:#020817 !important;
+  border-bottom:1px solid rgba(255,255,255,.12) !important;
+}
+
+body.light .site-header{
+  background:#ffffff !important;
+}
+
+body.dark .site-header,
+body.contrast .site-header{
+  background:#020817 !important;
+}
+
+main{
+  padding-top:82px !important;
+}
+
+body.font-normal{ font-size:16px !important; }
+body.font-large{ font-size:18px !important; }
+body.font-xlarge{ font-size:20px !important; }
+
+.access-panel{
+  max-width:calc(100vw - 28px) !important;
+  left:14px !important;
+  right:14px !important;
+  transform:none !important;
+  overflow:hidden !important;
+}
+
+.access-panel button{
+  width:100% !important;
+}
+
+body.contrast{
+  background:#000 !important;
+  color:#fff !important;
+}
+
+body.contrast .site-header,
+body.contrast .card,
+body.contrast .module-card,
+body.contrast .highlight-card{
+  background:#000 !important;
+  border:2px solid #fff !important;
+}
+
+body.contrast h1,
+body.contrast h2,
+body.contrast h3,
+body.contrast .brand-title,
+body.contrast .card-title{
+  color:#ffff00 !important;
+}
+
+body.contrast p,
+body.contrast span,
+body.contrast small{
+  color:#fff !important;
+}
+EOF
+
+cat >> js/script.js <<'EOF'
+
+/* PATCH V9.3 — FONTE ACESSÍVEL */
+window.setFont = function(scale){
+  document.body.classList.remove("font-normal","font-large","font-xlarge");
+  if(scale === 1.15){
+    document.body.classList.add("font-large");
+    localStorage.setItem("portal-font-class","font-large");
+  }else if(scale === 1.3){
+    document.body.classList.add("font-xlarge");
+    localStorage.setItem("portal-font-class","font-xlarge");
+  }else{
+    document.body.classList.add("font-normal");
+    localStorage.setItem("portal-font-class","font-normal");
+  }
+};
+
+window.resetAccess = function(){
+  document.body.classList.remove("font-normal","font-large","font-xlarge","contrast");
+  document.body.classList.add("font-normal");
+  localStorage.removeItem("portal-font-class");
+};
+
+document.addEventListener("DOMContentLoaded", function(){
+  const savedFont = localStorage.getItem("portal-font-class");
+  if(savedFont){
+    document.body.classList.add(savedFont);
+  }
+});
+EOF
+
+git add .
+git commit -m "Patch V9.3 header fixo brasao transparente acessibilidade"
+git pull --rebase origin main
+git push origin main
+cd ~/portal-prefeitura-vilabela-mt
+# 1. Brasão transparente em todas as páginas
+grep -rl "vilabela-brasao" *.html | xargs sed -i 's|assets/logos/vilabela-brasao-1-preta.png|assets/logos/vilabela-brasao-1-transparente.png|g'
+# 2. Corrigir cabeçalho fixo e acessibilidade
+cat >> css/style.css <<'EOF'
+
+/* PATCH V9.4 FINAL */
+html, body{
+  width:100%;
+  max-width:100%;
+  overflow-x:hidden !important;
+}
+
+.site-header,
+.header,
+.topbar{
+  position:sticky !important;
+  top:0 !important;
+  z-index:999999 !important;
+  background:#020817 !important;
+  backdrop-filter:blur(18px);
+}
+
+body.light .site-header,
+body.light .header,
+body.light .topbar{
+  background:#ffffff !important;
+}
+
+body.contrast .site-header,
+body.contrast .header,
+body.contrast .topbar{
+  background:#000 !important;
+  border-bottom:2px solid #fff !important;
+}
+
+main{
+  position:relative;
+  z-index:1;
+}
+
+/* Acessibilidade */
+body.font-a{
+  font-size:16px !important;
+}
+
+body.font-ap{
+  font-size:18px !important;
+}
+
+body.font-app{
+  font-size:20px !important;
+}
+
+body.font-ap h1,
+body.font-app h1{
+  line-height:1.08 !important;
+}
+
+.access-panel{
+  max-width:calc(100vw - 32px) !important;
+  left:16px !important;
+  right:16px !important;
+  transform:none !important;
+  z-index:999998 !important;
+}
+
+.access-panel button{
+  min-height:48px !important;
+}
+EOF
+
+# 3. Trocar funções de acessibilidade no JS
+cat >> js/script.js <<'EOF'
+
+/* PATCH V9.4 FINAL — Acessibilidade */
+window.setFont = function(size){
+  document.body.classList.remove("font-a","font-ap","font-app");
+
+  if(size === 1 || size === "1"){
+    document.body.classList.add("font-a");
+    localStorage.setItem("portal-font-size","font-a");
+  }
+
+  if(size === 1.15 || size === "1.15"){
+    document.body.classList.add("font-ap");
+    localStorage.setItem("portal-font-size","font-ap");
+  }
+
+  if(size === 1.3 || size === "1.3"){
+    document.body.classList.add("font-app");
+    localStorage.setItem("portal-font-size","font-app");
+  }
+};
+
+window.resetAccess = function(){
+  document.body.classList.remove("font-a","font-ap","font-app","contrast");
+  localStorage.removeItem("portal-font-size");
+};
+
+document.addEventListener("DOMContentLoaded", function(){
+  const saved = localStorage.getItem("portal-font-size");
+  if(saved){
+    document.body.classList.add(saved);
+  }
+});
+EOF
+
+# 4. Publicar
+git add .
+git commit -m "Patch V9.4 final brasao header acessibilidade"
+git pull --rebase origin main
+git push origin main
+cd ~/portal-prefeitura-vilabela-mt
+cat >> css/style.css <<'EOF'
+
+/* PATCH V9.5 FINAL — HEADER FIXO + ACESSIBILIDADE REAL */
+body{
+  --font-boost: 1;
+}
+
+body.font-a{ --font-boost: 1; }
+body.font-ap{ --font-boost: 1.14; }
+body.font-app{ --font-boost: 1.28; }
+
+body.font-ap,
+body.font-app{
+  font-size: calc(16px * var(--font-boost)) !important;
+}
+
+body.font-ap p,
+body.font-ap a,
+body.font-ap button,
+body.font-ap li,
+body.font-ap span,
+body.font-app p,
+body.font-app a,
+body.font-app button,
+body.font-app li,
+body.font-app span{
+  font-size: calc(1em * var(--font-boost)) !important;
+}
+
+body.font-ap h1{ font-size: clamp(2.2rem, 10vw, 4.8rem) !important; }
+body.font-app h1{ font-size: clamp(2.5rem, 11vw, 5.4rem) !important; }
+
+body.font-ap h2{ font-size: clamp(1.8rem, 7vw, 3.2rem) !important; }
+body.font-app h2{ font-size: clamp(2rem, 8vw, 3.6rem) !important; }
+
+/* Cabeçalho realmente fixo no mobile */
+.site-header,
+header.site-header,
+.header,
+.topbar{
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  z-index: 2147483647 !important;
+  background: #020817 !important;
+}
+
+body.light .site-header,
+body.light header.site-header,
+body.light .header,
+body.light .topbar{
+  background: #ffffff !important;
+}
+
+body{
+  padding-top: 96px !important;
+}
+
+@media(max-width: 600px){
+  body{
+    padding-top: 88px !important;
+  }
+}
+
+/* Painel acessibilidade sem duplicar/estourar */
+.access-panel{
+  position: fixed !important;
+  top: 110px !important;
+  left: 16px !important;
+  right: 16px !important;
+  width: auto !important;
+  max-width: none !important;
+  max-height: calc(100vh - 140px) !important;
+  overflow-y: auto !important;
+  z-index: 2147483646 !important;
+}
+
+/* Contraste mais forte */
+body.contrast{
+  background:#000 !important;
+  color:#fff !important;
+}
+
+body.contrast *{
+  text-shadow:none !important;
+}
+
+body.contrast h1,
+body.contrast h2,
+body.contrast h3,
+body.contrast .section-title{
+  color:#ffff00 !important;
+}
+
+body.contrast .card,
+body.contrast .module-card,
+body.contrast .glass-card{
+  background:#000 !important;
+  border:2px solid #fff !important;
+  color:#fff !important;
+}
+
+body.contrast .btn,
+body.contrast button{
+  background:#ffff00 !important;
+  color:#000 !important;
+  border:2px solid #fff !important;
+}
+EOF
+
+cat >> js/script.js <<'EOF'
+
+/* PATCH V9.5 FINAL — troca direta dos botões A */
+document.addEventListener("DOMContentLoaded", function(){
+  document.querySelectorAll("button, .access-panel button").forEach(function(btn){
+    const txt = (btn.textContent || "").trim();
+
+    if(txt === "A"){
+      btn.onclick = function(e){
+        e.preventDefault();
+        document.body.classList.remove("font-ap","font-app");
+        document.body.classList.add("font-a");
+        localStorage.setItem("portal-font-size","font-a");
+      };
+    }
+
+    if(txt === "A+"){
+      btn.onclick = function(e){
+        e.preventDefault();
+        document.body.classList.remove("font-a","font-app");
+        document.body.classList.add("font-ap");
+        localStorage.setItem("portal-font-size","font-ap");
+      };
+    }
+
+    if(txt === "A++"){
+      btn.onclick = function(e){
+        e.preventDefault();
+        document.body.classList.remove("font-a","font-ap");
+        document.body.classList.add("font-app");
+        localStorage.setItem("portal-font-size","font-app");
+      };
+    }
+  });
+});
+EOF
+
+git add .
+git commit -m "Patch V9.5 final header fixo acessibilidade real"
+git pull --rebase origin main
+git push origin main
+cd ~/portal-prefeitura-vilabela-mt
+find . -name "*.html" -exec sed -i 's|assets/logos/vilabela-brasao-1[^"]*|assets/logos/vilabela-brasao-1-transparente.png?v=10|g' {} +
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<link rel="stylesheet" href="css/style.css?v=10">
+<script defer src="js/script.js?v=10"></script>
+document.addEventListener("DOMContentLoaded", function(){
+});
+// Força sincronização do tema em TODOS navegadores
+(function(){
+})();
+// Limpa versões antigas automaticamente
+(function(){
+})();
+nano js/script.js
+git add .
+git commit -m "Patch V10 aplicado corretamente"
+git push
+nano manifest.json
+git add .
+git commit -m "V11 Portal PWA instalavel"
+git push origin main
+git pull --rebase origin main
+git push origin main
+git status
+git push origin main
+cd ~/portal-prefeitura-vilabela-mt
+mkdir -p assets/icons
+ls assets/icons
+git pull --rebase origin main
+ls assets/icons
+nano manifest.json
+git add .
+git commit -m "Atualiza manifest PWA com icones premium"
 git pull --rebase origin main
 git push origin main
