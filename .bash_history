@@ -1,7 +1,3 @@
-  object-fit:contain !important;
-  background:#fff !important;
-  padding:3px !important;
-  border-radius:4px !important;
 }
 
 body.contrast .hero,
@@ -496,5 +492,9 @@ git pull --rebase origin main
 git push origin main
 git add .
 git commit -m "Aplica V12.2 Debug Master acessibilidade"
+git pull --rebase origin main
+git push origin main
+git add .
+git commit -m "Corrige botoes A A+ A++ acessibilidade"
 git pull --rebase origin main
 git push origin main
