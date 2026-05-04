@@ -1,23 +1,3 @@
-  overflow-x:hidden !important;
-}
-
-.site-header{
-  position:sticky !important;
-  top:0 !important;
-  z-index:2147483647 !important;
-  width:100% !important;
-  min-height:72px !important;
-  background:rgba(255,255,255,.96) !important;
-  backdrop-filter:blur(18px) !important;
-  -webkit-backdrop-filter:blur(18px) !important;
-}
-
-body.dark .site-header,
-body.contrast .site-header{
-  background:rgba(2,6,18,.96) !important;
-}
-
-.brand img{
   object-fit:contain !important;
   background:#fff !important;
   padding:3px !important;
@@ -496,5 +476,25 @@ ls assets/icons
 nano manifest.json
 git add .
 git commit -m "Atualiza manifest PWA com icones premium"
+git pull --rebase origin main
+git push origin main
+git add .
+git commit -m "Atualiza manifest PWA com icones premium"
+git pull --rebase origin main
+git push origin main
+git add js/script.js
+git commit -m "Aplica script V12.1 integrado"
+git pull --rebase origin main
+git push origin main
+git add .
+git commit -m "Corrige acessibilidade fonte A A+ A++"
+git pull --rebase origin main
+git push origin main
+git add .
+git commit -m "Aplica V12.2 Debug Master acessibilidade"
+git pull --rebase origin main
+git push origin main
+git add .
+git commit -m "Aplica V12.2 Debug Master acessibilidade"
 git pull --rebase origin main
 git push origin main
