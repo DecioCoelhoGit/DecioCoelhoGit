@@ -1,73 +1,3 @@
-}
-
-body.contrast .hero,
-body.contrast .card{
-  background:#000 !important;
-  border:2px solid #fff !important;
-}
-
-body.contrast .hero-title,
-body.contrast .section-title,
-body.contrast .card h3{
-  color:#ffff00 !important;
-}
-
-body.contrast .btn-primary{
-  background:#ffff00 !important;
-  color:#000 !important;
-  border-color:#ffff00 !important;
-}
-
-@media(max-width:480px){
-  body{ padding-top:0 !important; }
-
-  .site-header{
-    display:flex !important;
-    align-items:center !important;
-    justify-content:space-between !important;
-    gap:8px !important;
-    padding:10px 12px !important;
-  }
-
-  .brand{
-    min-width:0 !important;
-    flex:1 !important;
-  }
-
-  .brand img{
-    width:44px !important;
-    height:44px !important;
-  }
-
-  .brand-title{
-    font-size:14px !important;
-    line-height:1.05 !important;
-  }
-
-  .header-actions{
-    display:flex !important;
-    gap:6px !important;
-    flex-shrink:0 !important;
-  }
-
-  .icon-btn{
-    width:42px !important;
-    height:42px !important;
-    font-size:20px !important;
-  }
-}
-EOF
-
-git add .
-git commit -m "Patch V9.2 ajuste final header brasao contraste"
-git pull --rebase origin main
-git push origin main
-cd ~/portal-prefeitura-vilabela-mt
-sed -i 's|assets/logos/vilabela-brasao-1-preta.png|assets/logos/vilabela-brasao-1-transparente.png|g' *.html
-sed -i 's|assets/logos/vilabela-brasao-1.png|assets/logos/vilabela-brasao-1-transparente.png|g' *.html
-cat >> css/style.css <<'EOF'
-
-/* PATCH V9.3 — HEADER FIXO + ACESSIBILIDADE */
 .site-header{
   position:fixed !important;
   top:0 !important;
@@ -498,3 +428,73 @@ git add .
 git commit -m "Corrige botoes A A+ A++ acessibilidade"
 git pull --rebase origin main
 git push origin main
+git add .
+git commit -m "Corrige acessibilidade por escala global"
+git pull --rebase origin main
+git push origin main
+git add .
+git commit -m "Corrige acessibilidade com classes globais V12.3"
+git pull --rebase origin main
+git push origin main
+cd ~/portal-camara-vilabela-mt
+mkdir -p assets/css assets/js assets/images assets/icons assets/docs
+mv style.css assets/css/style.css
+mv script.js assets/js/script.js
+# Se existir a pasta imagens, move tudo para assets/images
+if [ -d "imagens" ]; then   mv imagens/* assets/images/;   rmdir imagens; fi
+# Atualiza caminhos nos HTML
+for file in *.html; do   sed -i 's|href="style.css"|href="assets/css/style.css"|g' "$file";   sed -i 's|src="script.js"|src="assets/js/script.js"|g' "$file";   sed -i 's|imagens/|assets/images/|g' "$file"; done
+# Atualiza caminho da imagem no CSS
+sed -i 's|url("imagens/|url("../images/|g' assets/css/style.css
+sed -i "s|url('imagens/|url('../images/|g" assets/css/style.css
+git add .
+git commit -m "Reestrutura pastas assets css js images"
+git push
+cd ~/portal-camara-vilabela-mt
+# Conferir estrutura atual
+find . -maxdepth 3 -type f | sort
+# Criar pastas corretas
+mkdir -p assets/css assets/js assets/images assets/icons assets/docs
+# Corrigir pasta Icons para icons, se existir
+if [ -d "assets/Icons" ]; then   mv assets/Icons/* assets/icons/;   rmdir assets/Icons; fi
+# Renomear ícones PWA, se estiverem com nome alternativo
+if [ -f "assets/icons/camara-icon-192.png" ]; then   mv assets/icons/camara-icon-192.png assets/icons/icon-192.png; fi
+if [ -f "assets/icons/camara-icon-512.png" ]; then   mv assets/icons/camara-icon-512.png assets/icons/icon-512.png; fi
+# Garantir caminhos CSS/JS nas páginas
+for file in *.html; do   sed -i 's|href="style.css"|href="assets/css/style.css"|g' "$file";   sed -i 's|src="script.js"|src="assets/js/script.js"|g' "$file";   sed -i 's|imagens/|assets/images/|g' "$file"; done
+# Conferir status
+git status
+ls -la
+ls -la assets
+ls -la assets/css
+ls -la assets/js
+ls -la assets/images
+ls -la assets/icons
+cd ~/portal-camara-vilabela-mt
+pwd
+ls -la
+find . -maxdepth 3 -type f | sort
+git status
+git pull --rebase origin main
+cd ~
+ls
+cd portal-camara-vilabela-mt
+cd ~
+ls
+d portal-camara-vilabela-mt
+pwd
+portal-camara-vilabela-mt
+cd ~
+ls
+git clone https://github.com/DecioCoelhoGit/portal-camara-vilabela-mt.git
+cd portal-camara-vilabela-mt
+pwd
+cd ~
+ls
+cd portal-camara-vilabela-mt
+pwd
+git status
+nano robots.txt
+nano sitemap.xml
+nano manifest.json
+nano sw.js
