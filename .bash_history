@@ -1,67 +1,3 @@
-.site-header{
-  position:fixed !important;
-  top:0 !important;
-  left:0 !important;
-  right:0 !important;
-  z-index:999999 !important;
-  background:#020817 !important;
-  border-bottom:1px solid rgba(255,255,255,.12) !important;
-}
-
-body.light .site-header{
-  background:#ffffff !important;
-}
-
-body.dark .site-header,
-body.contrast .site-header{
-  background:#020817 !important;
-}
-
-main{
-  padding-top:82px !important;
-}
-
-body.font-normal{ font-size:16px !important; }
-body.font-large{ font-size:18px !important; }
-body.font-xlarge{ font-size:20px !important; }
-
-.access-panel{
-  max-width:calc(100vw - 28px) !important;
-  left:14px !important;
-  right:14px !important;
-  transform:none !important;
-  overflow:hidden !important;
-}
-
-.access-panel button{
-  width:100% !important;
-}
-
-body.contrast{
-  background:#000 !important;
-  color:#fff !important;
-}
-
-body.contrast .site-header,
-body.contrast .card,
-body.contrast .module-card,
-body.contrast .highlight-card{
-  background:#000 !important;
-  border:2px solid #fff !important;
-}
-
-body.contrast h1,
-body.contrast h2,
-body.contrast h3,
-body.contrast .brand-title,
-body.contrast .card-title{
-  color:#ffff00 !important;
-}
-
-body.contrast p,
-body.contrast span,
-body.contrast small{
-  color:#fff !important;
 }
 EOF
 
@@ -498,3 +434,67 @@ nano robots.txt
 nano sitemap.xml
 nano manifest.json
 nano sw.js
+git add .
+git commit -m "Patch final SEO PWA producao"
+git push
+Settings
+Pages
+Deploy from branch
+main
+/root
+Save
+# Conferir status
+cd ~/portal-camara-vilabela-mt
+pwd
+git status
+git add .
+git commit -m "Patch final SEO PWA producao"
+git push
+git pull --rebase origin main
+git push
+git status
+cd ~/portal-camara-vilabela-mt
+find . -maxdepth 3 -type f | sort
+for file in *.html; do   sed -i 's|href="style.css"|href="assets/css/style.css"|g' "$file";   sed -i 's|href="./style.css"|href="assets/css/style.css"|g' "$file";   sed -i 's|href="/style.css"|href="assets/css/style.css"|g' "$file";   sed -i 's|src="script.js"|src="assets/js/script.js"|g' "$file"; done
+git add .
+git commit -m "Corrige caminhos css js nas paginas"
+git push
+ls
+cd ~/portal-camara-vilabela-mt
+nano css/style.css
+assets/css/style.css
+cd ~/portal-camara-vilabela-mt
+assets/css/style.css
+nano assets/css/style.css
+cd ~/portal-camara-vilabela-mt
+nano assets/css/style.css
+git add .
+git commit -m "Patch visual premium master v1"
+git push
+nano assets/css/style.css
+git add .
+git commit -m "Cinema executivo v2"
+git push
+cd ~/portal-camara-vilabela-mt
+nano assets/css/style.css
+git add .
+git commit -m "V3 holografico govtech"
+git push
+nano assets/css/style.css
+git add .
+git commit -m "V4 dashboard real govtech"
+git push
+cd ~/portal-camara-vilabela-mt
+ls -la assets/images
+grep -R "brasao\|capa\|portal-og\|dashboard-bg" -n *.html assets/css/style.css
+cd ~/portal-camara-vilabela-mt
+for file in *.html; do   sed -i 's|imagens/brasao-camara.png|assets/images/brasao-camara.png|g' "$file";   sed -i 's|imagens/vereador-placeholder.png|assets/images/vereador-placeholder.png|g' "$file"; done
+sed -i 's|url("imagens/capa-camara.jpg")|url("../images/dashboard.bg.jpg")|g' assets/css/style.css
+git add .
+git commit -m "Corrige caminhos do brasao e capa"
+git push
+cd ~/portal-camara-vilabela-mt
+nano assets/css/style.css
+git add .
+git commit -m "V5 cinema master govtech"
+git push
