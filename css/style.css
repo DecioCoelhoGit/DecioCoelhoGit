@@ -690,3 +690,58 @@ body.contrast-theme .theme-button {
 
   .hero0
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --blue-neon: #00aeef;
+  --blue-dark: #005b96;
+  --black-premium: #05070d;
+  --white-tech: #f5f7fa;
+  --gold-premium: #f5b700;
+  --gray-tech: #a0a7b3;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--black-premium);
+  color: var(--white-tech);
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.topbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 50;
+
+.topbar.scrolled {
+  background: rgba(5, 7, 13, 0.92);
+  box-shadow: 0 10px 35px rgba(0, 174, 239, 0.18);
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+  transition: 0.8s ease;
+}
+
+0
+

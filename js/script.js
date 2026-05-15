@@ -97,3 +97,57 @@ function initThemeSystem() {
    FINAL: SISTEMA DE TEMAS
    ========================================================= */0
 
+// MONTAFÁCIL GLOBAL — Script V1
+// Interações suaves para a Landing Page cinematográfica
+
+document.addEventListener("DOMContentLoaded", () => {
+  const topbar = document.querySelector(".topbar");
+  const cards = document.querySelectorAll(".card, .flow div, .start-box");
+
+  // Efeito de sombra no cabeçalho ao rolar
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 40) {
+      topbar.classList.add("scrolled");
+    } else {
+      topbar.classList.remove("scrolled");
+    }
+  });
+
+  // Animação de entrada dos cards
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    },
+    {
+      threshold: 0.15,
+    }
+  );
+
+  cards.forEach((card) => {
+    card.classList.add("hidden");
+    observer.observe(card);
+  });
+
+  // Rolagem suave para links internos
+  document.querySelectorAll('a[href^="#"]').forEach((link) => {
+    link.addEventListener("click", (event) => {
+      const targetId = link.getAttribute("href");
+      const target = document.querySelector(targetId);
+
+      if (target) {
+        event.preventDefault();
+        target.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    });
+  });
+});
+
+0
+
