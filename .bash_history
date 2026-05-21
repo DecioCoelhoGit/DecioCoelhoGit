@@ -1,239 +1,4 @@
 }
-EOF
-
-cat >> js/script.js <<'EOF'
-
-/* PATCH V9.3 — FONTE ACESSÍVEL */
-window.setFont = function(scale){
-  document.body.classList.remove("font-normal","font-large","font-xlarge");
-  if(scale === 1.15){
-    document.body.classList.add("font-large");
-    localStorage.setItem("portal-font-class","font-large");
-  }else if(scale === 1.3){
-    document.body.classList.add("font-xlarge");
-    localStorage.setItem("portal-font-class","font-xlarge");
-  }else{
-    document.body.classList.add("font-normal");
-    localStorage.setItem("portal-font-class","font-normal");
-  }
-};
-
-window.resetAccess = function(){
-  document.body.classList.remove("font-normal","font-large","font-xlarge","contrast");
-  document.body.classList.add("font-normal");
-  localStorage.removeItem("portal-font-class");
-};
-
-document.addEventListener("DOMContentLoaded", function(){
-  const savedFont = localStorage.getItem("portal-font-class");
-  if(savedFont){
-    document.body.classList.add(savedFont);
-  }
-});
-EOF
-
-git add .
-git commit -m "Patch V9.3 header fixo brasao transparente acessibilidade"
-git pull --rebase origin main
-git push origin main
-cd ~/portal-prefeitura-vilabela-mt
-# 1. Brasão transparente em todas as páginas
-grep -rl "vilabela-brasao" *.html | xargs sed -i 's|assets/logos/vilabela-brasao-1-preta.png|assets/logos/vilabela-brasao-1-transparente.png|g'
-# 2. Corrigir cabeçalho fixo e acessibilidade
-cat >> css/style.css <<'EOF'
-
-/* PATCH V9.4 FINAL */
-html, body{
-  width:100%;
-  max-width:100%;
-  overflow-x:hidden !important;
-}
-
-.site-header,
-.header,
-.topbar{
-  position:sticky !important;
-  top:0 !important;
-  z-index:999999 !important;
-  background:#020817 !important;
-  backdrop-filter:blur(18px);
-}
-
-body.light .site-header,
-body.light .header,
-body.light .topbar{
-  background:#ffffff !important;
-}
-
-body.contrast .site-header,
-body.contrast .header,
-body.contrast .topbar{
-  background:#000 !important;
-  border-bottom:2px solid #fff !important;
-}
-
-main{
-  position:relative;
-  z-index:1;
-}
-
-/* Acessibilidade */
-body.font-a{
-  font-size:16px !important;
-}
-
-body.font-ap{
-  font-size:18px !important;
-}
-
-body.font-app{
-  font-size:20px !important;
-}
-
-body.font-ap h1,
-body.font-app h1{
-  line-height:1.08 !important;
-}
-
-.access-panel{
-  max-width:calc(100vw - 32px) !important;
-  left:16px !important;
-  right:16px !important;
-  transform:none !important;
-  z-index:999998 !important;
-}
-
-.access-panel button{
-  min-height:48px !important;
-}
-EOF
-
-# 3. Trocar funções de acessibilidade no JS
-cat >> js/script.js <<'EOF'
-
-/* PATCH V9.4 FINAL — Acessibilidade */
-window.setFont = function(size){
-  document.body.classList.remove("font-a","font-ap","font-app");
-
-  if(size === 1 || size === "1"){
-    document.body.classList.add("font-a");
-    localStorage.setItem("portal-font-size","font-a");
-  }
-
-  if(size === 1.15 || size === "1.15"){
-    document.body.classList.add("font-ap");
-    localStorage.setItem("portal-font-size","font-ap");
-  }
-
-  if(size === 1.3 || size === "1.3"){
-    document.body.classList.add("font-app");
-    localStorage.setItem("portal-font-size","font-app");
-  }
-};
-
-window.resetAccess = function(){
-  document.body.classList.remove("font-a","font-ap","font-app","contrast");
-  localStorage.removeItem("portal-font-size");
-};
-
-document.addEventListener("DOMContentLoaded", function(){
-  const saved = localStorage.getItem("portal-font-size");
-  if(saved){
-    document.body.classList.add(saved);
-  }
-});
-EOF
-
-# 4. Publicar
-git add .
-git commit -m "Patch V9.4 final brasao header acessibilidade"
-git pull --rebase origin main
-git push origin main
-cd ~/portal-prefeitura-vilabela-mt
-cat >> css/style.css <<'EOF'
-
-/* PATCH V9.5 FINAL — HEADER FIXO + ACESSIBILIDADE REAL */
-body{
-  --font-boost: 1;
-}
-
-body.font-a{ --font-boost: 1; }
-body.font-ap{ --font-boost: 1.14; }
-body.font-app{ --font-boost: 1.28; }
-
-body.font-ap,
-body.font-app{
-  font-size: calc(16px * var(--font-boost)) !important;
-}
-
-body.font-ap p,
-body.font-ap a,
-body.font-ap button,
-body.font-ap li,
-body.font-ap span,
-body.font-app p,
-body.font-app a,
-body.font-app button,
-body.font-app li,
-body.font-app span{
-  font-size: calc(1em * var(--font-boost)) !important;
-}
-
-body.font-ap h1{ font-size: clamp(2.2rem, 10vw, 4.8rem) !important; }
-body.font-app h1{ font-size: clamp(2.5rem, 11vw, 5.4rem) !important; }
-
-body.font-ap h2{ font-size: clamp(1.8rem, 7vw, 3.2rem) !important; }
-body.font-app h2{ font-size: clamp(2rem, 8vw, 3.6rem) !important; }
-
-/* Cabeçalho realmente fixo no mobile */
-.site-header,
-header.site-header,
-.header,
-.topbar{
-  position: fixed !important;
-  top: 0 !important;
-  left: 0 !important;
-  right: 0 !important;
-  width: 100% !important;
-  z-index: 2147483647 !important;
-  background: #020817 !important;
-}
-
-body.light .site-header,
-body.light header.site-header,
-body.light .header,
-body.light .topbar{
-  background: #ffffff !important;
-}
-
-body{
-  padding-top: 96px !important;
-}
-
-@media(max-width: 600px){
-  body{
-    padding-top: 88px !important;
-  }
-}
-
-/* Painel acessibilidade sem duplicar/estourar */
-.access-panel{
-  position: fixed !important;
-  top: 110px !important;
-  left: 16px !important;
-  right: 16px !important;
-  width: auto !important;
-  max-width: none !important;
-  max-height: calc(100vh - 140px) !important;
-  overflow-y: auto !important;
-  z-index: 2147483646 !important;
-}
-
-/* Contraste mais forte */
-body.contrast{
-  background:#000 !important;
-  color:#fff !important;
-}
 
 body.contrast *{
   text-shadow:none !important;
@@ -498,3 +263,238 @@ nano assets/css/style.css
 git add .
 git commit -m "V5 cinema master govtech"
 git push
+cd ~/portal-camara-vilabela-mt
+nano assets/js/script.js
+git add .
+git commit -m "V6 dashboard OLAP real"
+git push
+git pull origin main --rebase
+git push origin main
+git add .
+git commit -m "V7 charts executivos"
+git push
+nano dashboard.html
+git add .
+git commit -m "V7 charts executivos"
+git pull origin main --rebase
+git push origin main
+nano dashboard.html
+git add .
+git commit -m "V7.1 fix script charts"
+git pull origin main --rebase
+git push origin main
+nano dashboard.html
+git add .
+git commit -m "Padroniza cabecalho nas paginas do sistema"
+git pull origin main --rebase
+git push origin main
+cd ~/portal-camara-vilabela-mt
+nano assets/css/style.css
+git add .
+git commit -m "Fix header sistema mobile"
+git pull origin main --rebase
+git push origin main
+cd ~/portal-camara-vilabela-mt
+nano assets/css/style.css
+git add .
+git commit -m "Fix header sistema mobile"
+git pull origin main --rebase
+git push origin main
+cd ~/portal-camara-vilabela-mt
+nano assets/css/style.css
+git add .
+git commit -m "Corrige header mobile v2"
+git pull origin main --rebase
+git push origin main
+cd ~/portal-camara-vilabela-mt
+nano assets/css/style.css
+git add .
+git commit -m "Fix header compacto definitivo v3"
+git pull origin main --rebase
+git push origin main
+cd ~/portal-camara-vilabela-mt
+nano assets/css/style.css
+git add .
+git commit -m "Fix header compacto definitivo v3"
+git pull origin main --rebase
+git push origin main
+nano dashboard.html
+git add .
+git commit -m "Remove menu duplicado do dashboard"
+git pull origin main --rebase
+git push origin main
+nano dashboard.html
+cd ~/portal-camara-vilabela-mt
+nano assets/css/style.css
+git add .
+git commit -m "Ajusta dashboard e titulo mobile"
+git pull origin main --rebase
+git push origin main
+cd ~/portal-camara-vilabela-mt
+nano assets/css/style.css
+git add .
+git commit -m "Fix mobile header e hero v4"
+git pull origin main --rebase
+git push origin main
+cd ~/portal-camara-vilabela-mt
+nano assets/css/style.css
+git add .
+git commit -m "Fix definitivo mobile header dashboard"
+git pull origin main --rebase
+git push origin main
+cd ~/portal-camara-vilabela-mt
+nano assets/css/style.css
+git add .
+git commit -m "Fix final overflow mobile"
+git pull origin main --rebase
+git push origin main
+cd ~
+ls
+cd montafacil-global 
+pwd
+git status
+cd ~/montafacil-global
+mkdir -p css js assets/holograficos assets/img assets/icons assets/logos assets/videos docs
+touch index.html
+touch css/style.css
+touch js/script.js
+touch manifest.json
+touch service-worker.js
+touch docs/mini-deck.md
+touch docs/roteiro-apresentacao.md
+touch docs/proposta-executiva.md
+touch docs/roadmap.md
+ls
+tree
+pkg install tree
+git add .
+git commit -m "Estrutura base da Landing Page MontaFácil Global"
+git push
+cd ~/montafacil-global
+git status
+git pull origin main
+git commit -m "Organiza estrutura visual e assets da Landing Page MontaFácil Global"
+git push origin main
+nano index.html
+nano css/style.css
+nano js/script.js
+nano css/style.css
+git status
+git add .
+git commit -m "Implementa Landing Page cinematografica V1"
+git push origin main
+cd ~/montafacil-global
+python -m http.server 8080
+ls
+mkdir montafacil-global
+mv assets css docs js index.html manifest.json service-worker.js montafacil-global/
+cd montafacil-global
+ls
+git init
+git branch -M main
+git remote add origin https://github.com/DecioCoelhoGit/montafacil-global.git
+git add .
+git commit -m "Estrutura oficial MontaFacil Global"
+git push -u origin main
+git pull origin main --allow-unrelated-histories
+git pull origin main --no-rebase --allow-unrelated-histories
+0
+git push -u origin main
+git status
+git checkout --ours js/script.js
+git add js/script.js
+git commit -m "Resolve conflito de merge da Landing Page"
+git push origin main
+git checkout --ours index.html
+git checkout --ours css/style.css
+git checkout --ours js/script.js
+git add index.html
+git add css/style.css
+git add js/script.js
+git commit -m "Resolve conflitos da Landing Page V1"
+git push origin main
+git add .
+git commit -m "Integração Firebase V1"
+git push origin main
+git pull origin main --rebase
+git push origin main
+git pull origin main --rebase
+git push origin main
+cd ~/montafacil-global
+git status
+git pull origin main
+git pull origin master
+ls
+ls js
+ls css
+git status
+cd ~/montafacil-global
+git status
+git pull origin main
+git status
+git pull origin main
+git status
+git add index.html css/style.css
+git commit -m "Ajusta mobile landing page e rodape"
+git push
+git pull origin main
+git add .
+git commit -m "Adiciona camada holografica na landing page"
+git push
+git pull origin main
+git add index.html css/style.css
+git commit -m "Aplica patch v3 ajustes finos landing page"
+git push --set-upstream origin main
+git add .
+git commit -m "Patch V4 acessibilidade e sistema trilíngue"
+git push
+git pull origin main --rebase
+git push origin main
+git pull origin main --rebase
+git add .
+git commit -m "V5 cinematic experience"
+git push origin main
+git add index.html css/style.css
+git commit -m "Corrige logo hero e header fixo"
+git pull origin main --rebase
+git push origin main
+git add index.html css/style.css
+git commit -m "Corrige hero e adiciona imagem social sharing"
+git pull origin main --rebase
+git push origin main
+git add css/style.css
+git commit -m "Corrige hero compacto v5.3"
+git pull origin main --rebase
+git push origin main
+git add css/style.css
+git commit -m "Destrava rolagem mobile v5.4"
+git pull origin main --rebase
+git push origin main
+git add css/style.css
+git commit -m "Patch emergencial restaura rolagem mobile"
+git pull origin main --rebase
+git push origin main
+git add index.html css/style.css
+git commit -m "Adiciona header fixo tema e acessibilidade"
+git pull origin main --rebase
+git push origin main
+git add index.html css/style.css
+git commit -m "Adiciona header fixo tema e acessibilidade"
+git pull origin main --rebase
+git push origin main
+git add index.html css/style.css
+git commit -m "Adiciona header fixo tema e acessibilidade"
+git pull origin main --rebase
+git push origin main
+git add index.html css/style.css
+git commit -m "Corrige ferramentas acessibilidade e header fixo"
+git pull origin main --rebase
+git push origin main
+git add index.html css/style.css
+git commit -m "Corrige ferramentas acessibilidade e header fixo"
+git pull origin main --rebase
+git push origin main
+git add index.html css/style.css
+git commit -m "Corrige menu ancora landing page v4"
+git pull origin main --rebase
+git push origin main
